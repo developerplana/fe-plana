@@ -1,0 +1,31 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #1E1E1E;
+}
+
+p, .btn{
+    font-size: 1.5rem!important;
+}
+.btn-plana{
+    border: #DA0F00 2px solid!important;
+    color: #DA0F00!important;
+}
+
+.project-icon{
+    color: #DA0F00!important;
+}
+
+.btn:hover{
+    background-color:#DA0F00!important;
+    color:whitesmoke!important;
+}
+.section{
+    padding-top: 10em;
+    padding-bottom: 10em;
+    background-color: rgba(30, 30, 30, 0.6);
+}
+
+
