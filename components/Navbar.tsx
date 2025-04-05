@@ -1,3 +1,4 @@
+'use client';
 import Link from 'next/link';
 import styles from '../app/navbar.module.css'; // Custom styles
 
@@ -24,7 +25,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/about" className={`nav-link fw-bold text-light ${styles.unactive}`}>ABOUT</Link>
+              <Link href="/about/" className={`nav-link fw-bold text-light ${styles.unactive}`}>ABOUT</Link>
             </li>
             <li className="nav-item">
               <Link href="/blog" className={`nav-link fw-bold text-light ${styles.unactive}`}>BLOG</Link>

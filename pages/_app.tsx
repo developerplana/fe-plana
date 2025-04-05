@@ -16,9 +16,8 @@ import {Html, Head, Main, NextScript} from 'next/document';
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      
-        <Link href="https://fonts.googleapis.com/css family=Exo:wght@700&family=Montserrat:wght@500&display=swap" rel="stylesheet"/>
-        <Link href="#someid" scroll={false}/>
+      <Link href="https://fonts.googleapis.com/css family=Exo:wght@700&family=Montserrat:wght@500&display=swap" rel="stylesheet"/>
+      <Link href="#someid" scroll={false}/>
       <Navbar /> {/* Include the Navbar on all pages */}
       <Social/>
       <Component {...pageProps} /> {/* Render the current page */}
