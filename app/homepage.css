@@ -1,13 +1,11 @@
 .hero{
     padding-top: 35vh;
     padding-bottom: 5vh;
-    color: azure!important;
     align-items: flex-end;
   }
 
 .anti-hero{
     background-color: #1E1E1E;
-    color: azure!important;
     border-radius: 48px 48px 0 0;
 }
 
