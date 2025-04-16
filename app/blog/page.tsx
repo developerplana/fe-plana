@@ -34,7 +34,7 @@ export default function About() {
                                     <p className="card-title text-uppercase fw-bold">Card title </p>
                                 </div>
                                 <div className='card-footer text-end'>
-                                    <button type="button" className="btn btn-blog fw-bold rounded-pill px-4 justify-content-end">READ ARTICLE</button>
+                                    <Link href={'/blog/detail/'} className="btn btn-blog fw-bold rounded-pill px-4 justify-content-end">READ ARTICLE</Link>
                                 </div>
                             </div>
                         </div>
