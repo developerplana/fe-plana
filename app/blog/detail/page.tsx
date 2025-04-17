@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from '../../../components/Navbar';
 // import Footer from '../../../components/Footer';
 import Social from '../../../components/Social';
+import Image from 'next/image';
 
 
 export default function About() {
@@ -29,7 +30,8 @@ export default function About() {
                     <div className='row justify-content-center'>
                         <div className="col-12 col-lg-10">
                             <h2 className='text-uppercase fw-bold mb-4'>Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
-                            <img src="https://www.dropbox.com/scl/fi/54piuxkyqd4ksu0yabkun/filip-eliasson-qaF4IhTuZv0-unsplash.webp?rlkey=hwp8wirl76frdf8n7qdwxhm40&st=gdhe4nae&raw=1" className="img-fluid mb-1" alt="..."/>
+                            <Image src="https://dropbox.com/scl/fi/54piuxkyqd4ksu0yabkun/filip-eliasson-qaF4IhTuZv0-unsplash.webp?rlkey=hwp8wirl76frdf8n7qdwxhm40&st=gdhe4nae&raw=1" width={16} height={9}layout="responsive" className="card-img-top mb-1 rounded-2" alt=""></Image>
+                            
                             <p className='fs-5 fw-normal mb-2 mt-3'>By PLANA Vision | Published in 22 May 2025</p>
                             <hr className='border-white py-3'/>
                             <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
@@ -56,7 +58,7 @@ export default function About() {
                     <div className="row row-cols-1 row-cols-lg-3">
                         <div className="col mb-4">
                             <div className="card card-blog h-100 border-0">
-                                <img src="https://www.dropbox.com/scl/fi/54piuxkyqd4ksu0yabkun/filip-eliasson-qaF4IhTuZv0-unsplash.webp?rlkey=hwp8wirl76frdf8n7qdwxhm40&st=gdhe4nae&raw=1" className="card-img-top mb-1 rounded-2" alt="..."/>
+                            <Image src="https://dropbox.com/scl/fi/54piuxkyqd4ksu0yabkun/filip-eliasson-qaF4IhTuZv0-unsplash.webp?rlkey=hwp8wirl76frdf8n7qdwxhm40&st=gdhe4nae&raw=1" width={16} height={9}layout="responsive" className="card-img-top mb-1 rounded-2" alt=""></Image>
                                 <div className="card-body">
                                     <p className="card-title text-uppercase fw-bold">Card title </p>
                                 </div>
@@ -69,7 +71,7 @@ export default function About() {
                         
                         <div className="col mb-4">
                             <div className="card card-blog h-100 border-0">
-                                <img src="https://www.dropbox.com/scl/fi/54piuxkyqd4ksu0yabkun/filip-eliasson-qaF4IhTuZv0-unsplash.webp?rlkey=hwp8wirl76frdf8n7qdwxhm40&st=gdhe4nae&raw=1" className="card-img-top mb-1 rounded-2" alt="..."/>
+                            <Image src="https://dropbox.com/scl/fi/54piuxkyqd4ksu0yabkun/filip-eliasson-qaF4IhTuZv0-unsplash.webp?rlkey=hwp8wirl76frdf8n7qdwxhm40&st=gdhe4nae&raw=1" width={16} height={9}layout="responsive" className="card-img-top mb-1 rounded-2" alt=""></Image>
                                 <div className="card-body">
                                     <p className="card-title text-uppercase fw-bold">Card title </p>
                                 </div>
@@ -81,7 +83,7 @@ export default function About() {
                         
                         <div className="col mb-4">
                             <div className="card card-blog h-100 border-0">
-                                <img src="https://www.dropbox.com/scl/fi/54piuxkyqd4ksu0yabkun/filip-eliasson-qaF4IhTuZv0-unsplash.webp?rlkey=hwp8wirl76frdf8n7qdwxhm40&st=gdhe4nae&raw=1" className="card-img-top mb-1 rounded-2" alt="..."/>
+                            <Image src="https://dropbox.com/scl/fi/54piuxkyqd4ksu0yabkun/filip-eliasson-qaF4IhTuZv0-unsplash.webp?rlkey=hwp8wirl76frdf8n7qdwxhm40&st=gdhe4nae&raw=1" width={16} height={9}layout="responsive" className="card-img-top mb-1 rounded-2" alt=""></Image>
                                 <div className="card-body">
                                     <p className="card-title text-uppercase fw-bold">Card title </p>
                                 </div>

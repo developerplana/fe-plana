@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from '../../components/Navbar';
 // import Footer from '../../components/Footer';
 import Social from '../../components/Social';
-// import Image from 'next/image';
+import Image from 'next/image';
 
 
 export default function About() {
@@ -41,12 +41,13 @@ export default function About() {
                                     </p>
                                 </div>
                                 <div className='col-12 col-lg-6'>
-                                    <img className='img-fluid' src='https://www.dropbox.com/scl/fi/jbyorr0gmq5jmx8d6tjj1/plana-shoot-2.webp?rlkey=kzfxv24a02ok8rnjbkt1pchmh&st=cac2q5zl&raw=1'/>
+                                    <Image src="https://dropbox.com/scl/fi/jbyorr0gmq5jmx8d6tjj1/plana-shoot-2.webp?rlkey=kzfxv24a02ok8rnjbkt1pchmh&st=cac2q5zl&raw=1" width={16} height={9}layout="responsive" className="card-img-top mb-1 rounded-2" alt=""></Image>
                                 </div>
                             </div>
                             <div className='row'>
                                 <div className='col-12 col-lg-6'>
-                                    <img className='img-fluid' src='https://www.dropbox.com/scl/fi/f36y9dhtt9yvcvnfgnt4s/plana-shoot-3.webp?rlkey=s7xj7164g0s54eskxxqkys55w&st=h91n1owj&raw=1'/>
+                                    <Image src="https://dropbox.com/scl/fi/f36y9dhtt9yvcvnfgnt4s/plana-shoot-3.webp?rlkey=s7xj7164g0s54eskxxqkys55w&st=h91n1owj&raw=1" width={16} height={9}layout="responsive" className="card-img-top mb-1 rounded-2" alt=""></Image>
+                                    
                                 </div>
                                 <div className='col-12 col-lg-6'>
                                     <p>
@@ -112,7 +113,8 @@ export default function About() {
                     </div>
                     <div className='row mb-5'>
                         <div className='col-lg-4'>
-                            <img className='img-fluid' src='https://www.dropbox.com/scl/fi/it8lutpgb0x6fmeexhlyj/image-46.webp?rlkey=3cloclxiwldxlipooievn4ohe&st=68ahocx4&raw=1'/>
+                            <Image src="https://dropbox.com/scl/fi/it8lutpgb0x6fmeexhlyj/image-46.webp?rlkey=3cloclxiwldxlipooievn4ohe&st=68ahocx4&raw=1" width={16} height={9}layout="responsive" className="card-img-top mb-1 rounded-2" alt=""></Image>
+                            
                         </div>
                         <div className='col-lg-8'>
                             <figure>
@@ -131,7 +133,8 @@ export default function About() {
                     </div>
                     <div className='row'>
                         <div className='col-lg-4'>
-                            <img className='img-fluid' src='https://www.dropbox.com/scl/fi/quv41lqv2p07ommlqs7zc/image.webp?rlkey=5dvwdl89b8qxtinimkefybn3a&st=wlj1dvwv&raw=1'/>
+                            <Image src="https://dropbox.com/scl/fi/quv41lqv2p07ommlqs7zc/image.webp?rlkey=5dvwdl89b8qxtinimkefybn3a&st=wlj1dvwv&raw=1" width={16} height={9}layout="responsive" className="card-img-top mb-1 rounded-2" alt=""></Image>
+                            
                         </div>
                         <div className='col-lg-8'>
                             <figure>

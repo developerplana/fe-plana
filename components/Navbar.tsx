@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from '../app/navbar.module.css'; // Custom styles
 
 const Navbar = () => {
@@ -8,7 +9,8 @@ const Navbar = () => {
       <div className="container-xl">
         {/* Logo */}
         <Link href="/" className={`${styles.logo}`}>
-        <img className='img-fluid pb-3' src='https://www.dropbox.com/scl/fi/vzo8jtd3tvw9zfumy35c1/PlanaRED.png?rlkey=b3m5fvijrvyl2hd2y5712oihv&st=itdbox7z&raw=1'/>
+        <Image src='https://dropbox.com/scl/fi/vzo8jtd3tvw9zfumy35c1/PlanaRED.png?rlkey=b3m5fvijrvyl2hd2y5712oihv&st=itdbox7z&raw=1' width="120" height="60" layout="intrinsic" alt="profile"
+          className='img-fluid pb-3'></Image>
         </Link>
 
         {/* Toggle Button for Mobile View */}

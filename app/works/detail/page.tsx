@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // import Social from '../../../components/Social';
 import React from "react";
 import Slider from "react-slick";
+import Image from 'next/image';
 
 
 export default function About() {
@@ -69,7 +70,7 @@ export default function About() {
                     <div className="row row-cols-1 row-cols-lg-3">
                         <div className="col mb-4">
                         <div className="card card-project h-100 bg-transparent border-0">
-                            <img src="https://www.dropbox.com/scl/fi/epg8d52lnl9hgpbghen7t/Mask-group-2.jpg?rlkey=wgapmhh3fo4wftum9s8dyk21g&st=uym5rlvu&raw=1" className="card-img-top mb-1 rounded-2" alt="..."/>
+                            <Image src="https://dropbox.com/scl/fi/epg8d52lnl9hgpbghen7t/Mask-group-2.jpg?rlkey=wgapmhh3fo4wftum9s8dyk21g&st=uym5rlvu&raw=1" width={16} height={9}layout="responsive" className="card-img-top mb-1 rounded-2" alt=""></Image>
                             <div className="card-body p-0">
                             <div className="row g-0">
                                 <div className="col-1 pt-1">
@@ -84,7 +85,7 @@ export default function About() {
                         
                         <div className="col mb-4">
                         <div className="card card-project h-100 bg-transparent border-0">
-                            <img src="https://www.dropbox.com/scl/fi/epg8d52lnl9hgpbghen7t/Mask-group-2.jpg?rlkey=wgapmhh3fo4wftum9s8dyk21g&st=uym5rlvu&raw=1" className="card-img-top mb-1 rounded-2" alt="..."/>
+                            <Image src="https://dropbox.com/scl/fi/epg8d52lnl9hgpbghen7t/Mask-group-2.jpg?rlkey=wgapmhh3fo4wftum9s8dyk21g&st=uym5rlvu&raw=1" width={16} height={9}layout="responsive" className="card-img-top mb-1 rounded-2" alt=""></Image>
                             <div className="card-body p-0">
                             <div className="row g-0">
                                 <div className="col-1 pt-1">
@@ -99,7 +100,7 @@ export default function About() {
                         
                         <div className="col mb-4">
                         <div className="card card-project h-100 bg-transparent border-0">
-                            <img src="https://www.dropbox.com/scl/fi/dmk4na0no7trmivoklxwg/Mask-group.jpg?rlkey=2aarkte7jwifynm4guo1jt48d&st=3911uk9m&raw=1" className="card-img-top mb-1 rounded-2" alt="..."/>
+                            <Image src="https://dropbox.com/scl/fi/dmk4na0no7trmivoklxwg/Mask-group.jpg?rlkey=2aarkte7jwifynm4guo1jt48d&st=3911uk9m&raw=1" width={16} height={9}layout="responsive" className="card-img-top mb-1 rounded-2" alt=""></Image>
                             <div className="card-body p-0">
                             <div className="row g-0">
                                 <div className="col-1 pt-1">

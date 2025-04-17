@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import styles from '../app/footer.module.css'; // Custom styles
+import Image from 'next/image';
 
 const Footer = () => {
     return (
@@ -18,8 +19,8 @@ const Footer = () => {
         <div className={`container-xl`} >
           <div className='row align-bottom'>
             <div className='col-12 col-lg-8 align-bottom'>
-              <img className='img-fluid pb-4' src='https://plana.vision/wp-content/uploads/2023/01/Logo-Plana-White-min.png'/>
-              <p className='fs-5 text-light'>Copyright © 2025 PLANA | ALL RIGHTS RESERVED</p>
+              <Image src='https://dropbox.com/scl/fi/yzxugxgwg7kbsxhs1rc84/PlanaWHITE.png?rlkey=afnzbkosjd7qa9l4hxgpro5k1&st=oi536kqw&raw=1' width="120" height="60" layout="intrinsic" alt="profile"
+              className='img-fluid pb-3'></Image>              
             </div>
             <div className='col-12 col-lg-4 align-bottom'>
               <p className='fs-5 text-light'>
