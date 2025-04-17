@@ -1,11 +1,11 @@
 'use client';
-import type { AppProps } from 'next/app';
-import Link from 'next/link';
+// import type { AppProps } from 'next/app';
+// import Link from 'next/link';
 import '../../generalplana.css'; // Import global styles
 import '../../homepage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from '../../../components/Footer';
-import Social from '../../../components/Social';
+// import Navbar from '../../../components/Footer';
+// import Social from '../../../components/Social';
 import React from "react";
 import Slider from "react-slick";
 

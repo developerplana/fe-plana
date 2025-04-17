@@ -1,6 +1,17 @@
-import Link from "next/link"
+import Link from "next/link";
+import { useEffect } from 'react';
+
+
 
 export default function Home() {
+  useEffect(() => {
+    import('bootstrap/dist/js/bootstrap.bundle.min.js')
+      .then(() => {
+        console.log('Bootstrap loaded');
+      })
+      .catch((err) => console.error('Error loading Bootstrap', err));
+  }, []);
+
     return (
       <main>
         <div className="section py-5 px-4 px-xl-0">
