@@ -10,7 +10,7 @@ import Social from '../../components/Social';
 import Image from 'next/image';
 
 
-export default function About() {
+export default function Works() {
     return (    
         <>
         <Navbar />

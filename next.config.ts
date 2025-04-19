@@ -8,6 +8,6 @@ export default nextConfig;
 
 module.exports = {
   images: {
-    domains: ['dropbox.com'],
+    domains: ['dropbox.com','www.dropbox.com', 'dl.dropboxusercontent.com','127.0.0.1'],
   },
 };

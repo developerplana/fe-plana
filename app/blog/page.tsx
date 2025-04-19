@@ -6,15 +6,15 @@ import '../homepage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from '../../components/Navbar';
 // import Footer from '../../components/Footer';
-import Social from '../../components/Social';
+// import Social from '../../components/Social';
 import Image from 'next/image';
 
 
-export default function About() {
+export default function Blog() {
     return (    
         <>
         <Navbar />
-        <Social/>
+        {/* <Social/> */}
         <main>
             <div className="section headpage px-4 px-xl-0">
                 <div className="container-xl">

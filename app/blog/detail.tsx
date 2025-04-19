@@ -9,7 +9,7 @@ import Footer from '../../components/Footer';
 import Social from '../../components/Social';
 
 
-export default function About() {
+export default function Detail() {
     return (    
         <>
         <Navbar />

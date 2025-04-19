@@ -1,4 +1,4 @@
-import Link from 'next/link';
+// import Link from 'next/link';
 import styles from '../app/footer.module.css'; // Custom styles
 import Image from 'next/image';
 
@@ -10,7 +10,7 @@ const Footer = () => {
             <div className='row justify-content-center'>
                 <div className='col-12'>
                   <p className='display-5 fw-bold text-light'>GOT A PROJECT IN MIND?</p>
-                  <button type="button" className="btn btn-plana fw-bold rounded-pill px-4 justify-content-end">LET'S TALK</button>
+                  <button type="button" className="btn btn-plana fw-bold rounded-pill px-4 justify-content-end">LETS TALK</button>
                 </div>
             </div>
           </div>

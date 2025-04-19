@@ -9,7 +9,7 @@ import Navbar from '../../components/Navbar';
 import Social from '../../components/Social';
 
 
-export default function About() {
+export default function Contact() {
     return (    
         <>
         <Navbar />
@@ -66,7 +66,7 @@ export default function About() {
                                 </div>
                                 <div className="mb-4">
                                     <label className="form-label h5 fw-bold text-uppercase">Message</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows='4'></textarea>
+                                    <textarea className="form-control" id="exampleFormControlTextarea1" rows={4}></textarea>
                                 </div>
                                 <button type="submit" className="btn btn-plana fw-bold rounded-pill px-4">SEND</button>
                             </form>
