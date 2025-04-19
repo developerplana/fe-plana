@@ -13,8 +13,13 @@ export default function Home() {
       .catch(err => console.error('Failed to load Bootstrap JS', err));
   }, []);
   
+  type WorkItem = {
+    titleID: string;
+    image: string;
+  };
+
   //get API works
-  const [dataWorks, setDataWorks] = useState<any>(null);  // 'any' to handle dynamic response structure
+  const [dataWorks, setDataWorks] = useState<WorkItem[]>([]); // 'any' to handle dynamic response structure
   const [loadingWorks, setLoadingWorks] = useState(true);
 
   useEffect(() => {
@@ -33,7 +38,6 @@ export default function Home() {
   }, []);
 
   if (loadingWorks) return <p>Loading...</p>;
-  console.log(dataWorks);
 
     return (
       <main>
@@ -85,8 +89,8 @@ export default function Home() {
                 </div>
                 <div className="col-12 col-lg-8">
                   <div className="row row-cols-1 row-cols-lg-2">
-                    {dataWorks.map((item: any) => (
-                    <div className="col mb-4">
+                  {dataWorks.map((item: WorkItem, index) => (
+                    <div className="col mb-4" key={index}>
                       <div className="card card-project h-100 bg-transparent border-0">
                         <Image src={item.image} width={1} height={1}layout="responsive" className="card-img-top mb-1 rounded-2" alt=""></Image>
                         <div className="card-body p-0">
