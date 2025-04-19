@@ -28,15 +28,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <>
+    <Navbar /><Social />
     <html lang="en">
-        <Navbar />
-        <Social/>
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
       </body>
-      <Footer/>
     </html>
+    <Footer /></>
+
   );
 }

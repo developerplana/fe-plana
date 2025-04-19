@@ -1,19 +1,20 @@
 'use client';
-import type { AppProps } from 'next/app';
+// import type { AppProps } from 'next/app';
 import Link from 'next/link';
 import '../generalplana.css'; // Import global styles
 import '../homepage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
-import Social from '../../components/Social';
+// import Footer from '../../components/Footer';
+// import Social from '../../components/Social';
+import Image from 'next/image';
 
 
-export default function About() {
+export default function Blog() {
     return (    
         <>
         <Navbar />
-        <Social/>
+        {/* <Social/> */}
         <main>
             <div className="section headpage px-4 px-xl-0">
                 <div className="container-xl">
@@ -29,7 +30,7 @@ export default function About() {
                     <div className="row row-cols-1 row-cols-lg-3">
                         <div className="col mb-4">
                             <div className="card card-blog h-100 border-0">
-                                <img src="https://www.dropbox.com/scl/fi/54piuxkyqd4ksu0yabkun/filip-eliasson-qaF4IhTuZv0-unsplash.webp?rlkey=hwp8wirl76frdf8n7qdwxhm40&st=gdhe4nae&raw=1" className="card-img-top mb-1 rounded-2" alt="..."/>
+                                <Image src="https://dropbox.com/scl/fi/54piuxkyqd4ksu0yabkun/filip-eliasson-qaF4IhTuZv0-unsplash.webp?rlkey=hwp8wirl76frdf8n7qdwxhm40&st=gdhe4nae&raw=1" width={16} height={9}layout="responsive" className="card-img-top mb-1 rounded-2" alt=""></Image>
                                 <div className="card-body">
                                     <p className="card-title text-uppercase fw-bold">Card title </p>
                                 </div>
@@ -40,7 +41,7 @@ export default function About() {
                         </div>
                         <div className="col mb-4">
                             <div className="card card-blog h-100 border-0">
-                                <img src="https://www.dropbox.com/scl/fi/54piuxkyqd4ksu0yabkun/filip-eliasson-qaF4IhTuZv0-unsplash.webp?rlkey=hwp8wirl76frdf8n7qdwxhm40&st=gdhe4nae&raw=1" className="card-img-top mb-1 rounded-2" alt="..."/>
+                                <Image src="https://dropbox.com/scl/fi/54piuxkyqd4ksu0yabkun/filip-eliasson-qaF4IhTuZv0-unsplash.webp?rlkey=hwp8wirl76frdf8n7qdwxhm40&st=gdhe4nae&raw=1" width={16} height={9}layout="responsive" className="card-img-top mb-1 rounded-2" alt=""></Image>
                                 <div className="card-body">
                                     <p className="card-title text-uppercase fw-bold">Card title </p>
                                 </div>
@@ -51,7 +52,7 @@ export default function About() {
                         </div>
                         <div className="col mb-4">
                             <div className="card card-blog h-100 border-0">
-                                <img src="https://www.dropbox.com/scl/fi/54piuxkyqd4ksu0yabkun/filip-eliasson-qaF4IhTuZv0-unsplash.webp?rlkey=hwp8wirl76frdf8n7qdwxhm40&st=gdhe4nae&raw=1" className="card-img-top mb-1 rounded-2" alt="..."/>
+                                <Image src="https://dropbox.com/scl/fi/54piuxkyqd4ksu0yabkun/filip-eliasson-qaF4IhTuZv0-unsplash.webp?rlkey=hwp8wirl76frdf8n7qdwxhm40&st=gdhe4nae&raw=1" width={16} height={9}layout="responsive" className="card-img-top mb-1 rounded-2" alt=""></Image>
                                 <div className="card-body">
                                     <p className="card-title text-uppercase fw-bold">Card title </p>
                                 </div>
@@ -62,7 +63,7 @@ export default function About() {
                         </div>
                         <div className="col mb-4">
                             <div className="card card-blog h-100 border-0">
-                                <img src="https://www.dropbox.com/scl/fi/54piuxkyqd4ksu0yabkun/filip-eliasson-qaF4IhTuZv0-unsplash.webp?rlkey=hwp8wirl76frdf8n7qdwxhm40&st=gdhe4nae&raw=1" className="card-img-top mb-1 rounded-2" alt="..."/>
+                                <Image src="https://dropbox.com/scl/fi/54piuxkyqd4ksu0yabkun/filip-eliasson-qaF4IhTuZv0-unsplash.webp?rlkey=hwp8wirl76frdf8n7qdwxhm40&st=gdhe4nae&raw=1" width={16} height={9}layout="responsive" className="card-img-top mb-1 rounded-2" alt=""></Image>
                                 <div className="card-body">
                                     <p className="card-title text-uppercase fw-bold">Card title </p>
                                 </div>
@@ -73,7 +74,7 @@ export default function About() {
                         </div>
                         <div className="col mb-4">
                             <div className="card card-blog h-100 border-0">
-                                <img src="https://www.dropbox.com/scl/fi/54piuxkyqd4ksu0yabkun/filip-eliasson-qaF4IhTuZv0-unsplash.webp?rlkey=hwp8wirl76frdf8n7qdwxhm40&st=gdhe4nae&raw=1" className="card-img-top mb-1 rounded-2" alt="..."/>
+                                <Image src="https://dropbox.com/scl/fi/54piuxkyqd4ksu0yabkun/filip-eliasson-qaF4IhTuZv0-unsplash.webp?rlkey=hwp8wirl76frdf8n7qdwxhm40&st=gdhe4nae&raw=1" width={16} height={9}layout="responsive" className="card-img-top mb-1 rounded-2" alt=""></Image>
                                 <div className="card-body">
                                     <p className="card-title text-uppercase fw-bold">Card title </p>
                                 </div>
@@ -84,7 +85,7 @@ export default function About() {
                         </div>
                         <div className="col mb-4">
                             <div className="card card-blog h-100 border-0">
-                                <img src="https://www.dropbox.com/scl/fi/54piuxkyqd4ksu0yabkun/filip-eliasson-qaF4IhTuZv0-unsplash.webp?rlkey=hwp8wirl76frdf8n7qdwxhm40&st=gdhe4nae&raw=1" className="card-img-top mb-1 rounded-2" alt="..."/>
+                                <Image src="https://dropbox.com/scl/fi/54piuxkyqd4ksu0yabkun/filip-eliasson-qaF4IhTuZv0-unsplash.webp?rlkey=hwp8wirl76frdf8n7qdwxhm40&st=gdhe4nae&raw=1" width={16} height={9}layout="responsive" className="card-img-top mb-1 rounded-2" alt=""></Image>
                                 <div className="card-body">
                                     <p className="card-title text-uppercase fw-bold">Card title </p>
                                 </div>
@@ -95,7 +96,7 @@ export default function About() {
                         </div>
                         <div className="col mb-4">
                             <div className="card card-blog h-100 border-0">
-                                <img src="https://www.dropbox.com/scl/fi/54piuxkyqd4ksu0yabkun/filip-eliasson-qaF4IhTuZv0-unsplash.webp?rlkey=hwp8wirl76frdf8n7qdwxhm40&st=gdhe4nae&raw=1" className="card-img-top mb-1 rounded-2" alt="..."/>
+                                <Image src="https://dropbox.com/scl/fi/54piuxkyqd4ksu0yabkun/filip-eliasson-qaF4IhTuZv0-unsplash.webp?rlkey=hwp8wirl76frdf8n7qdwxhm40&st=gdhe4nae&raw=1" width={16} height={9}layout="responsive" className="card-img-top mb-1 rounded-2" alt=""></Image>
                                 <div className="card-body">
                                     <p className="card-title text-uppercase fw-bold">Card title </p>
                                 </div>
@@ -106,7 +107,7 @@ export default function About() {
                         </div>
                         <div className="col mb-4">
                             <div className="card card-blog h-100 border-0">
-                                <img src="https://www.dropbox.com/scl/fi/54piuxkyqd4ksu0yabkun/filip-eliasson-qaF4IhTuZv0-unsplash.webp?rlkey=hwp8wirl76frdf8n7qdwxhm40&st=gdhe4nae&raw=1" className="card-img-top mb-1 rounded-2" alt="..."/>
+                                <Image src="https://dropbox.com/scl/fi/54piuxkyqd4ksu0yabkun/filip-eliasson-qaF4IhTuZv0-unsplash.webp?rlkey=hwp8wirl76frdf8n7qdwxhm40&st=gdhe4nae&raw=1" width={16} height={9}layout="responsive" className="card-img-top mb-1 rounded-2" alt=""></Image>
                                 <div className="card-body">
                                     <p className="card-title text-uppercase fw-bold">Card title </p>
                                 </div>
@@ -117,7 +118,7 @@ export default function About() {
                         </div>
                         <div className="col mb-4">
                             <div className="card card-blog h-100 border-0">
-                                <img src="https://www.dropbox.com/scl/fi/54piuxkyqd4ksu0yabkun/filip-eliasson-qaF4IhTuZv0-unsplash.webp?rlkey=hwp8wirl76frdf8n7qdwxhm40&st=gdhe4nae&raw=1" className="card-img-top mb-1 rounded-2" alt="..."/>
+                                <Image src="https://dropbox.com/scl/fi/54piuxkyqd4ksu0yabkun/filip-eliasson-qaF4IhTuZv0-unsplash.webp?rlkey=hwp8wirl76frdf8n7qdwxhm40&st=gdhe4nae&raw=1" width={16} height={9}layout="responsive" className="card-img-top mb-1 rounded-2" alt=""></Image>
                                 <div className="card-body">
                                     <p className="card-title text-uppercase fw-bold">Card title </p>
                                 </div>

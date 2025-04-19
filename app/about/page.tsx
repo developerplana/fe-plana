@@ -1,11 +1,11 @@
 'use client';
-import type { AppProps } from 'next/app';
-import Link from 'next/link';
+// import type { AppProps } from 'next/app';
+// import Link from 'next/link';
 import '../generalplana.css'; // Import global styles
 import '../homepage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
+// import Footer from '../../components/Footer';
 import Social from '../../components/Social';
 import Image from 'next/image';
 
@@ -41,16 +41,28 @@ export default function About() {
                                     </p>
                                 </div>
                                 <div className='col-12 col-lg-6'>
-                                    <img className='img-fluid' src='https://www.dropbox.com/scl/fi/jbyorr0gmq5jmx8d6tjj1/plana-shoot-2.webp?rlkey=kzfxv24a02ok8rnjbkt1pchmh&st=cac2q5zl&raw=1'/>
+                                <Image
+                                    className='img-fluid'
+                                    src='https://www.dropbox.com/scl/fo/1gbbwcea4jiu0rwsl4aip/AIHopkeGgnM9R_yQewnYaoQ/plana-shoot-2.webp?rlkey=enflcwuo2lwhalvoxx0gg8zt2&dl=0'
+                                    alt='description'
+                                    width={800} // you can adjust this
+                                    height={600} // adjust this too
+                                    />
                                 </div>
                             </div>
                             <div className='row'>
                                 <div className='col-12 col-lg-6'>
-                                    <img className='img-fluid' src='https://www.dropbox.com/scl/fi/f36y9dhtt9yvcvnfgnt4s/plana-shoot-3.webp?rlkey=s7xj7164g0s54eskxxqkys55w&st=h91n1owj&raw=1'/>
+                                     <Image
+                                    className='img-fluid'
+                                    src='https://www.dropbox.com/scl/fo/1gbbwcea4jiu0rwsl4aip/AOROBUlIc1efD5f4FgU3KZc?e=2&preview=plana-shoot-2.webp&rlkey=enflcwuo2lwhalvoxx0gg8zt2&st=l7v2rc96&dl=0'
+                                    alt='description'
+                                    width={800} // you can adjust this
+                                    height={600} // adjust this too
+                                    />
                                 </div>
                                 <div className='col-12 col-lg-6'>
                                     <p>
-                                        At Plana, we bridge the gap between global creativity and local proficiency. Our mission is to elevate Indonesia’s creative industry by blending world-class expertise with local talents, delivering exceptional production value for clients both locally and globally. By assembling the right team for each project, we transform ideas into compelling visual experiences. Whether working with local brands or international giants, our goal is to deliver unparalleled quality, creativity, and professionalism in every frame.
+                                        At Plana, we bridge the gap between global creativity and local proficiency. Our mission is to elevate Indonesias creative industry by blending world-class expertise with local talents, delivering exceptional production value for clients both locally and globally. By assembling the right team for each project, we transform ideas into compelling visual experiences. Whether working with local brands or international giants, our goal is to deliver unparalleled quality, creativity, and professionalism in every frame.
                                     </p>
                                 </div>
                             </div>
@@ -112,7 +124,13 @@ export default function About() {
                     </div>
                     <div className='row mb-5'>
                         <div className='col-lg-4'>
-                            <img className='img-fluid' src='https://www.dropbox.com/scl/fi/it8lutpgb0x6fmeexhlyj/image-46.webp?rlkey=3cloclxiwldxlipooievn4ohe&st=68ahocx4&raw=1'/>
+                            <Image
+                                className='img-fluid'
+                                src='https://www.dropbox.com/scl/fi/it8lutpgb0x6fmeexhlyj/image-46.webp?rlkey=3cloclxiwldxlipooievn4ohe&st=68ahocx4&raw=1'
+                                alt='description'
+                                width={800}
+                                height={600}
+                            />
                         </div>
                         <div className='col-lg-8'>
                             <figure>
@@ -131,7 +149,13 @@ export default function About() {
                     </div>
                     <div className='row'>
                         <div className='col-lg-4'>
-                            <img className='img-fluid' src='https://www.dropbox.com/scl/fi/quv41lqv2p07ommlqs7zc/image.webp?rlkey=5dvwdl89b8qxtinimkefybn3a&st=wlj1dvwv&raw=1'/>
+                            <Image
+                                className='img-fluid'
+                                src='https://www.dropbox.com/scl/fi/quv41lqv2p07ommlqs7zc/image.webp?rlkey=5dvwdl89b8qxtinimkefybn3a&st=wlj1dvwv&raw=1'
+                                alt='description'
+                                width={800}
+                                height={600}
+                            />
                         </div>
                         <div className='col-lg-8'>
                             <figure>
@@ -151,7 +175,7 @@ export default function About() {
                  </div>
             </div>
             <div className='section py-5 px-4 px-xl-0'>
-                 <div className="py-5"></div>
+                <div className="py-5"></div>
             </div>
         </main>
         {/* <Footer/> */}

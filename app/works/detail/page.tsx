@@ -1,16 +1,17 @@
 'use client';
-import type { AppProps } from 'next/app';
-import Link from 'next/link';
+// import type { AppProps } from 'next/app';
+// import Link from 'next/link';
 import '../../generalplana.css'; // Import global styles
 import '../../homepage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from '../../../components/Footer';
-import Social from '../../../components/Social';
+// import Navbar from '../../../components/Footer';
+// import Social from '../../../components/Social';
 import React from "react";
-import Slider from "react-slick";
+// import Slider from "react-slick";
+import Image from 'next/image';
 
 
-export default function About() {
+export default function DetailWorks() {
     return (    
         <>
         {/* <Navbar /> */}
@@ -35,7 +36,7 @@ export default function About() {
                                 </li>
                             </ul>
                             <div className='video-container mb-4'>
-                                <iframe className='responsive-iframe' src="https://www.youtube.com/embed/S0ZF9JJqxF8?si=IOVeDzW9c5Y55QmP" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                <iframe className='responsive-iframe' src="https://www.youtube.com/embed/S0ZF9JJqxF8?si=IOVeDzW9c5Y55QmP" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                             </div>    
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -69,7 +70,7 @@ export default function About() {
                     <div className="row row-cols-1 row-cols-lg-3">
                         <div className="col mb-4">
                         <div className="card card-project h-100 bg-transparent border-0">
-                            <img src="https://www.dropbox.com/scl/fi/epg8d52lnl9hgpbghen7t/Mask-group-2.jpg?rlkey=wgapmhh3fo4wftum9s8dyk21g&st=uym5rlvu&raw=1" className="card-img-top mb-1 rounded-2" alt="..."/>
+                            <Image src="https://dropbox.com/scl/fi/epg8d52lnl9hgpbghen7t/Mask-group-2.jpg?rlkey=wgapmhh3fo4wftum9s8dyk21g&st=uym5rlvu&raw=1" width={16} height={9}layout="responsive" className="card-img-top mb-1 rounded-2" alt=""></Image>
                             <div className="card-body p-0">
                             <div className="row g-0">
                                 <div className="col-1 pt-1">
@@ -84,7 +85,7 @@ export default function About() {
                         
                         <div className="col mb-4">
                         <div className="card card-project h-100 bg-transparent border-0">
-                            <img src="https://www.dropbox.com/scl/fi/epg8d52lnl9hgpbghen7t/Mask-group-2.jpg?rlkey=wgapmhh3fo4wftum9s8dyk21g&st=uym5rlvu&raw=1" className="card-img-top mb-1 rounded-2" alt="..."/>
+                            <Image src="https://dropbox.com/scl/fi/epg8d52lnl9hgpbghen7t/Mask-group-2.jpg?rlkey=wgapmhh3fo4wftum9s8dyk21g&st=uym5rlvu&raw=1" width={16} height={9}layout="responsive" className="card-img-top mb-1 rounded-2" alt=""></Image>
                             <div className="card-body p-0">
                             <div className="row g-0">
                                 <div className="col-1 pt-1">
@@ -99,7 +100,7 @@ export default function About() {
                         
                         <div className="col mb-4">
                         <div className="card card-project h-100 bg-transparent border-0">
-                            <img src="https://www.dropbox.com/scl/fi/dmk4na0no7trmivoklxwg/Mask-group.jpg?rlkey=2aarkte7jwifynm4guo1jt48d&st=3911uk9m&raw=1" className="card-img-top mb-1 rounded-2" alt="..."/>
+                            <Image src="https://dropbox.com/scl/fi/dmk4na0no7trmivoklxwg/Mask-group.jpg?rlkey=2aarkte7jwifynm4guo1jt48d&st=3911uk9m&raw=1" width={16} height={9}layout="responsive" className="card-img-top mb-1 rounded-2" alt=""></Image>
                             <div className="card-body p-0">
                             <div className="row g-0">
                                 <div className="col-1 pt-1">

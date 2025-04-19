@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Social from '../components/Social';
-import {Html, Head, Main, NextScript} from 'next/document';
+// import {Html, Head, Main, NextScript} from 'next/document';
 
 // Import Navbar component
 // import 'https://fonts.googleapis.com';

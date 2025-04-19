@@ -1,15 +1,15 @@
 'use client';
-import type { AppProps } from 'next/app';
+// import type { AppProps } from 'next/app';
 import Link from 'next/link';
 import '../generalplana.css'; // Import global styles
 import '../homepage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
+// import Footer from '../../components/Footer';
 import Social from '../../components/Social';
 
 
-export default function About() {
+export default function Contact() {
     return (    
         <>
         <Navbar />
@@ -66,7 +66,7 @@ export default function About() {
                                 </div>
                                 <div className="mb-4">
                                     <label className="form-label h5 fw-bold text-uppercase">Message</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows='4'></textarea>
+                                    <textarea className="form-control" id="exampleFormControlTextarea1" rows={4}></textarea>
                                 </div>
                                 <button type="submit" className="btn btn-plana fw-bold rounded-pill px-4">SEND</button>
                             </form>
