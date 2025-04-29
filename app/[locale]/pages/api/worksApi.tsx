@@ -6,7 +6,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method === 'GET') {
     try {
       const apiUrl = `${process.env.NEXT_PUBLIC_API_URL}/api/works`;
-
       console.log("ini:,",apiUrl);
       const response = await axios.get(apiUrl);
 
