@@ -8,10 +8,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const apiUrl = `http://152.42.215.103/api/works`;
       console.log("ini:,",apiUrl);
       const response = await axios.get(apiUrl);
-
       res.status(200).json(response.data);
-    } catch (error: any) {
-      console.error('Error fetching data from Laravel API:', error?.response?.data || error.message);
+    } catch (error: unknown) {
+      console.error('Error fetching data from Laravel API:', error instanceof Error ? error.message : String(error));
       res.status(500).json({ error: 'Failed to fetch data from Laravel API' });
     }
   } else {

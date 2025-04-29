@@ -4,7 +4,7 @@ import { worksAllService } from '../services';
 const useWorksAll = () => {
   const [worksData, setWorksData] = useState([]); // Initialize with an empty array
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -14,6 +14,7 @@ const useWorksAll = () => {
         setWorksData(data);
       } catch (err) {
         console.log(err);
+        setError(true); // Changed to set boolean instead of the error object
       } finally {
         setLoading(false);
       }

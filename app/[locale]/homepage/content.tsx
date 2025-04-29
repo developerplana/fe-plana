@@ -1,16 +1,10 @@
 'use client';
-import type { Metadata } from "next";
 import Link from "next/link";
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import type { AppProps } from 'next/app';
 import '../../[locale]/generalplana.css'; // Import global styles
 import '../../[locale]/homepage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import Social from '../components/Social';
-import { useLocale } from "next-intl";
 import useWorksAll   from  '../works/usecase/useWorksAll';
 
 
@@ -24,18 +18,14 @@ export default function HomePage() {
   }, []);
   
   type WorkItem = {
-    id: any;
+    id: string;
     titleID: string;
     image: string;
   };
 
   //get API works
   const [dataWorks, setDataWorks] = useState<WorkItem[]>([]);// 'any' to handle dynamic response structure
-  const [loadingWorks, setLoadingWorks] = useState(true);
-  const { worksData, loading, error } = useWorksAll(); 
-  
-  const locale = useLocale();
-
+  const { worksData } = useWorksAll(); 
 
   useEffect(() => {
     setDataWorks(worksData);

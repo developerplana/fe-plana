@@ -32,7 +32,7 @@ interface LayoutProps {
   params: { locale: string };
 }
 
-export default function LocaleLayout({ children, params }: LayoutProps) {
+export default function LocaleLayout({ children }: LayoutProps) {
   const locale = useLocale();
   const messages = useMessages();
   // Ensure that the locale exists in the list of supported locales

@@ -5,13 +5,14 @@ import axios from 'axios';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     try {
-      const apiUrl = `http://127.0.0.1:8000/api/works`;
+      const apiUrl = `${process.env.NEXT_PUBLIC_API_URL}/api/works`;
+
       console.log("ini:,",apiUrl);
       const response = await axios.get(apiUrl);
 
       res.status(200).json(response.data);
-    } catch (error: any) {
-      console.error('Error fetching data from Laravel API:', error?.response?.data || error.message);
+    } catch (error: unknown) {
+      console.error('Error fetching data from Laravel API:', error);
       res.status(500).json({ error: 'Failed to fetch data from Laravel API' });
     }
   } else {

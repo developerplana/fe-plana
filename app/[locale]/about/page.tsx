@@ -5,7 +5,9 @@ async function getPageData() {
   
     const pathSegment = 'about'
     
-    const res = await fetch(`http://127.0.0.1:8000/api/metatag/${pathSegment}`, {
+    const baseUrl = process.env.NEXT_PUBLIC_API_URL ?? 'http://127.0.0.1:8000';
+
+    const res = await fetch(`${baseUrl}/api/metatag/${pathSegment}`, {
       next: { revalidate: 60 },
     });
     
