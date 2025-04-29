@@ -1,0 +1,10 @@
+{
+    "Navbar": {
+      "home": "Home",
+      "about": "About",
+      "api": "api"
+    },
+    "Footer": {
+      "copyright": "© 2025"
+    }
+  }

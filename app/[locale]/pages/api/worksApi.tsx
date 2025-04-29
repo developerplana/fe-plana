@@ -5,7 +5,7 @@ import axios from 'axios';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     try {
-      const apiUrl = `http://152.42.215.103/api/works`;
+      const apiUrl = `http://127.0.0.1:8000/api/works`;
       console.log("ini:,",apiUrl);
       const response = await axios.get(apiUrl);
 
