@@ -5,23 +5,23 @@ async function getPageData() {
   
     const pathSegment = 'works'
     
-    const res = await fetch(`http://127.0.0.1:8000/api/metatag/${pathSegment}`, {
+    const baseUrl = process.env.NEXT_PUBLIC_API_URL ?? 'http://127.0.0.1:8000';
+
+    const res = await fetch(`${baseUrl}/api/metatag/${pathSegment}`, {
       next: { revalidate: 60 },
     });
+    
     
     return res.json();
   }
  
 export async function generateMetadata() {
-  const data =  getPageData();
-  const safeData = data ?? [];  
-    const keywordsArray = typeof safeData.meta_keywords === 'string'
-    ? safeData.meta_keywords.split(',').map((kw: string) => kw.trim())
-    : safeData.meta_keywords || [];
+  const data = await getPageData();
+ 
     return {
-      title: safeData.meta_title,
-      description: safeData.meta_description,
-      keywords: keywordsArray,
+      title: data.meta_title,
+      description: data.meta_description,
+      keywords: data.meta_keywords,
     };
 }
 
