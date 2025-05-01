@@ -2,8 +2,6 @@
 import '../../generalplana.css'; // Import global styles
 import '../../homepage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from '../../components/Navbar';
-import Social from '../../components/Social';
 import React from "react";
 import Image from 'next/image';
 
@@ -11,8 +9,6 @@ import Image from 'next/image';
 export default function DetailWorks() {
     return (    
         <>
-        <Navbar />
-        <Social/>
         <main>
             aa
             <div className="section headpage px-4 px-xl-0">
