@@ -4,11 +4,38 @@ import '../../generalplana.css'; // Import global styles
 import '../../homepage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from "react";
-// import Slider from "react-slick";
 import Image from 'next/image';
-
+import useWorksId   from  '../usecase/useWorksId';
+import { useEffect, useState } from 'react';
+import { useParams } from 'next/navigation';
 
 export default function Page() {
+    const params = useParams();
+    const rawId = params?.id;
+
+    type WorkItem = {
+        [x: string]: string;
+        id: string;
+        titleID: string;
+        image: string;
+        urlYoutube:string;
+        descID:string;
+        director:string;
+        yearProduction:string;
+        client:string;
+    };
+    
+    const [dataWorks, setDataWorks] = useState<WorkItem | null>(null);
+    const id = typeof rawId === 'string' ? rawId : Array.isArray(rawId) ? rawId[0] : '';
+    const { worksData } = useWorksId(id);
+  
+    console.log("ini works data",worksData)
+    useEffect(() => {
+        if(worksData){
+            setDataWorks(worksData)
+        }
+    }, [worksData]);
+
     return (    
         <>
         <main>
@@ -28,27 +55,38 @@ export default function Page() {
                         <div className='col-12'>
                             <ul className='plana-work'>
                                 <li className="text-uppercase fw-bold">
-                                    <h2>Regarde les hommes tomber</h2>
+                                    <h2>{dataWorks?.titleID}</h2>
                                 </li>
                             </ul>
-                            <div className='video-container mb-4'>
-                                <iframe className='responsive-iframe' src="https://www.youtube.com/embed/S0ZF9JJqxF8?si=IOVeDzW9c5Y55QmP" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-                            </div>    
+                            {dataWorks?.urlYoutube ? (
+                                <div className="video-container mb-4">
+                                    <iframe
+                                    className="responsive-iframe"
+                                    src={dataWorks.urlYoutube}
+                                    title="YouTube video player"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowFullScreen
+                                    frameBorder="0"
+                                    ></iframe>
+                                </div>
+                                ) : (
+                                <p>No video available.</p>
+                            )}
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                {dataWorks?.descID}
                             </p>
                             <div className='row'>
                                 <div className='col-12 col-lg-4'>
                                     <p className='mb-0'>Director</p>
-                                    <p className='fw-bold text-uppercase'>Stanley Kubrick</p>
+                                    <p className='fw-bold text-uppercase'>{dataWorks?.director}</p>
                                 </div>
                                 <div className='col-12 col-lg-3'>
                                     <p className='mb-0'>Production Year</p>
-                                    <p className='fw-bold text-uppercase'>2022</p>
+                                    <p className='fw-bold text-uppercase'>{dataWorks?.yearProduction}</p>
                                 </div>
                                 <div className='col-12 col-lg-5'>
                                     <p className='mb-0'>Client</p>
-                                    <p className='fw-bold text-uppercase'>Regarde les Hommes Tomber</p>
+                                    <p className='fw-bold text-uppercase'>{dataWorks?.client}</p>
                                 </div>
                             </div>
                         </div>
@@ -70,7 +108,7 @@ export default function Page() {
                             <div className="card-body p-0">
                             <div className="row g-0">
                                 <div className="col-1 pt-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="27" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-clapperboard-icon lucide-clapperboard pb-1 project-icon"><path d="M20.2 6 3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3Z"/><path d="m6.2 5.3 3.1 3.9"/><path d="m12.4 3.4 3.1 4"/><path d="M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg></div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="27" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" stroke-linejoin="round" className="lucide lucide-clapperboard-icon lucide-clapperboard pb-1 project-icon"><path d="M20.2 6 3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3Z"/><path d="m6.2 5.3 3.1 3.9"/><path d="m12.4 3.4 3.1 4"/><path d="M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg></div>
                                 <div className="col-11">
                                 <p className="card-title text-uppercase fw-bold">Card title </p>
                                 </div>
@@ -85,7 +123,7 @@ export default function Page() {
                             <div className="card-body p-0">
                             <div className="row g-0">
                                 <div className="col-1 pt-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="27" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-clapperboard-icon lucide-clapperboard pb-1 project-icon"><path d="M20.2 6 3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3Z"/><path d="m6.2 5.3 3.1 3.9"/><path d="m12.4 3.4 3.1 4"/><path d="M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg></div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="27" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" stroke-linejoin="round" className="lucide lucide-clapperboard-icon lucide-clapperboard pb-1 project-icon"><path d="M20.2 6 3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3Z"/><path d="m6.2 5.3 3.1 3.9"/><path d="m12.4 3.4 3.1 4"/><path d="M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg></div>
                                 <div className="col-11">
                                 <p className="card-title text-uppercase fw-bold">Card title </p>
                                 </div>
@@ -100,7 +138,7 @@ export default function Page() {
                             <div className="card-body p-0">
                             <div className="row g-0">
                                 <div className="col-1 pt-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-camera-icon lucide-camera project-icon"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" stroke-linejoin="round" className="lucide lucide-camera-icon lucide-camera project-icon"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
                                 </div>
                                 <div className="col-11">
                                 <p className="card-title text-uppercase fw-bold">Card title </p>
