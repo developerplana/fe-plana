@@ -8,7 +8,6 @@ import 'slick-carousel/slick/slick-theme.css';
 import Navbar from '../[locale]/components/Navbar';
 import Footer from '../[locale]/components/Footer';
 import Social from '../[locale]/components/Social';
-import { ReactNode } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,12 +26,14 @@ export const metadata: Metadata = {
 };
 
 interface LayoutProps {
-  children: ReactNode;
-  params: { locale: string };
+  params: {
+    locale: string;
+  };
+  children: React.ReactNode;
 }
 
 export default function LocaleLayout({ children, params }: LayoutProps) {
-  const { locale } = params; // Get locale directly from params
+  const { locale } = params;  // params should contain the locale directly
   const messages = useMessages();
 
   // Ensure that the locale exists in the list of supported locales
