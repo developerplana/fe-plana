@@ -10,8 +10,20 @@ const getWorksAll = async () => {
   }
 };
 
+const getWorksId = async (id: string | number) => {
+  try {
+    const response = await axios.get(`/api/works/${id}`);
+    console.log("✅ getWorksId response:", response.data);
+    return response.data;
+  } catch (error) {
+    console.error(`Error in getWorksId for ID ${id}:`, error);
+    throw error;
+  }
+};
+
 const worksService = {
   getWorksAll,
+  getWorksId,
 };
 
 export default worksService;

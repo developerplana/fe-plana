@@ -18,6 +18,7 @@ export default function HomePage() {
   }, []);
   
   type WorkItem = {
+    [x: string]: string;
     id: string;
     titleID: string;
     image: string;
@@ -89,12 +90,16 @@ export default function HomePage() {
                             <Link href={`/works/${item.id}`} className="text-decoration-none text-reset">
                               <div className="card card-project h-100 bg-transparent border-0">
                                 <Image
-                                  src={`${process.env.NEXT_PUBLIC_LARAVEL_BASE_URL}${item.image}`}
+                                  src={
+                                    process.env.NEXT_PUBLIC_LARAVEL_BASE_URL?.includes("http://127.0.0.1:8000")
+                                      ? `${item.image?.replace(/^\//, "")}`
+                                      : `${process.env.NEXT_PUBLIC_LARAVEL_BASE_URL?.replace(/\/$/, "")}/${item.image?.replace(/^\//, "")}`
+                                  }
                                   width={1}
                                   height={1}
                                   layout="responsive"
                                   className="card-img-top mb-1 rounded-2"
-                                  alt="" />
+                                  alt={item.imageDesc} />
                                 <div className="card-body p-0">
                                   <div className="row g-0">
                                     <div className="col-1 pt-1">

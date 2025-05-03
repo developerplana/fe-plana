@@ -15,12 +15,13 @@ export default function Works() {
     id: string;
     titleID: string;
     image: string;
+    imageDesc:string;
   };
 
 
   const [dataWorks, setDataWorks] = useState<WorkItem[]>([]);// 'any' to handle dynamic response structure
   const { worksData } = useWorksAll(); 
-
+  console.log("ini worksData",worksData)
   useEffect(() => {
     setDataWorks(worksData);
   }, [worksData]);
@@ -44,11 +45,16 @@ export default function Works() {
                             <Link key={index} href={`/works/${item.id}`} className="text-decoration-none text-reset">
                               <div className="col">
                                 <div className="card card-project h-100 bg-transparent border-0">
-                                  <Image src={`${process.env.NEXT_PUBLIC_LARAVEL_BASE_URL}${item.image}`}
+                                  <Image 
+                                  src={
+                                    process.env.NEXT_PUBLIC_LARAVEL_BASE_URL?.includes("http://127.0.0.1:8000")
+                                      ? `${item.image?.replace(/^\//, "")}`
+                                      : `${process.env.NEXT_PUBLIC_LARAVEL_BASE_URL?.replace(/\/$/, "")}/${item.image?.replace(/^\//, "")}`
+                                  }
                                    width={16} 
                                    height={9}layout="responsive" 
                                    className="card-img-top mb-1 rounded-2"
-                                    alt="">
+                                    alt={item.imageDesc}>
                                   </Image>
                                   
                                   <div className="card-body p-0">
