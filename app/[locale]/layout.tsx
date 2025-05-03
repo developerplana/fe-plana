@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { NextIntlClientProvider, useMessages } from "next-intl";
-import { useLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { Geist, Geist_Mono } from "next/font/google";
 import 'slick-carousel/slick/slick.css';
@@ -32,15 +31,15 @@ interface LayoutProps {
   params: { locale: string };
 }
 
-export default function LocaleLayout({ children }: LayoutProps) {
-  const locale = useLocale();
+export default function LocaleLayout({ children, params }: LayoutProps) {
+  const { locale } = params; // Get locale directly from params
   const messages = useMessages();
+
   // Ensure that the locale exists in the list of supported locales
   const supportedLocales = ['en', 'id'];
   if (!supportedLocales.includes(locale)) {
     notFound();
   }
-
 
   return (
     <html lang={locale} className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
