@@ -46,10 +46,9 @@ export default function BlogDetail() {
         if (blogsData) { // Check if blogsData exists
           setDataBlogs(blogsData);
         }
-        if(blogsDataSlug){
-            setDataBlogsSlug(blogsDataSlug)
-        }
-      }, [blogsData]);
+        setDataBlogsSlug(blogsDataSlug)
+        
+      }, [blogsData, blogsDataSlug]);
     return (    
         <>
         <main>
