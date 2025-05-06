@@ -1,21 +1,21 @@
 import { useEffect,useState } from 'react';
 import { blogsAllService } from '../services';
 
-const useWorksId = (id: string) => {
-    const [blogsData, setBlogsData] = useState(null);
+const useBlogSlug = (slug: string) => {
+    const [blogsDataSlug, setBlogsData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
   
     useEffect(() => {
-      if (!id) return; // Prevent running if id is not provided
+      if (!slug) return; // Prevent running if id is not provided
   
       const fetchData = async () => {
         setLoading(true);
         try {
-          const data = await blogsAllService.getBlogsId(id)
+          const data = await blogsAllService.getBlogsId(slug)
           setBlogsData(data);
         } catch (err) {
-          console.error('Error fetching work by ID:', err);
+          console.error('Error fetching work by Slug:', err);
           setError(true);
         } finally {
           setLoading(false);
@@ -23,9 +23,9 @@ const useWorksId = (id: string) => {
       };
   
       fetchData();
-    }, [id]);
+    }, [slug]);
   
-    return { blogsData, loading, error };
+    return { blogsDataSlug, loading, error };
 };
   
-export default useWorksId;
+export default useBlogSlug;

@@ -51,6 +51,10 @@ const nextConfig: NextConfig = {
         source: '/api/:path*',
         destination: `${process.env.NEXT_PUBLIC_CMS_BASE_URL}` + '/api/:path*'
       },
+      {
+        source: '/storage/uploads/:path*',
+        destination: `${process.env.NEXT_PUBLIC_CMS_BASE_URL}` +'/storage/uploads/:path*',
+      },
     ]
   },
   // Add other Next.js options here if needed

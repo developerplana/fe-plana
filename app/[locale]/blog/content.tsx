@@ -19,6 +19,8 @@ export default function Blog() {
         descEN:string;
         image:string;
         altImageDesc:string;
+        slug:string;
+        author:string;
       };
     
       //get API works
@@ -59,12 +61,12 @@ export default function Blog() {
                                     className="card-img-top mb-1 rounded-2"
                                     alt={item.imageDesc} />
                                     <div className="card-body">
-                                    <p className="card-title text-uppercase fw-bold">{item.title || "Card title"}</p>
+                                    <p className="card-title text-uppercase fw-bold">{item.titleID || "Card title"}</p>
                                     </div>
 
                                     <div className='card-footer text-end'>
                                     <Link
-                                        href={`/blog/detail/${item.titleID.toLowerCase().replace(/\s+/g, '-')}`}
+                                        href={`/blog/detail/${item.slug}`}
                                         className="btn btn-blog fw-bold rounded-pill px-4 justify-content-end"
                                         >
                                         READ ARTICLE

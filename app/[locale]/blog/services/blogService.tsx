@@ -10,13 +10,13 @@ const getBlogsAll = async () => {
   }
 };
 
-const getBlogsId = async (id: string | number) => {
+const getBlogsId = async (slug: string | number) => {
   try {
-    const response = await axios.get(`/api/blogs/${id}`);
+    const response = await axios.get(`/api/blogs/detail/${slug}`);
     console.log("✅ getBlogsId response:", response.data);
     return response.data;
   } catch (error) {
-    console.error(`Error in getBlogsId for ID ${id}:`, error);
+    console.error(`Error in getBlogsId for ID ${slug}:`, error);
     throw error;
   }
 };
