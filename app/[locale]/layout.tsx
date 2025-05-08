@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { NextIntlClientProvider, useMessages } from "next-intl";
+import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import { Geist, Geist_Mono } from "next/font/google";
 import 'slick-carousel/slick/slick.css';
@@ -9,6 +9,14 @@ import Navbar from '../[locale]/components/Navbar';
 import Footer from '../[locale]/components/Footer';
 import Social from '../[locale]/components/Social';
 import Canonical from '../[locale]/components/Canonical';
+import enMessages from '../../messages/en.json';
+import idMessages from '../../messages/id.json';
+
+
+const MESSAGES = {
+  en: enMessages,
+  id: idMessages,
+};
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,21 +36,19 @@ export const metadata: Metadata = {
 };
 
 interface LayoutProps {
-  params: {
-    locale: string;
-  };
+  params: { locale: string };
   children: React.ReactNode;
 }
 
-export default function LocaleLayout({ children, params }: LayoutProps) {
-  const { locale } = params;  // params should contain the locale directly
-  const messages = useMessages();
+export default async function LocaleLayout(props: LayoutProps) {
+  const { children, params } = props;
+  const { locale } = params;
 
-  // Ensure that the locale exists in the list of supported locales
-  const supportedLocales = ['en', 'id'];
-  if (!supportedLocales.includes(locale)) {
-    notFound();
-  }
+  // Load messages manually if needed
+  if (!['en', 'id'].includes(locale)) notFound();
+
+  const messages = MESSAGES[locale as keyof typeof MESSAGES];
+
 
   return (
     <html lang={locale} className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
