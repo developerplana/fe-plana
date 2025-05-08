@@ -8,6 +8,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import Navbar from '../[locale]/components/Navbar';
 import Footer from '../[locale]/components/Footer';
 import Social from '../[locale]/components/Social';
+import Canonical from '../[locale]/components/Canonical';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -46,6 +47,7 @@ export default function LocaleLayout({ children, params }: LayoutProps) {
   return (
     <html lang={locale} className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
       <body>
+        <Canonical />
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Navbar />
           <Social />

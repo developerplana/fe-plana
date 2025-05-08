@@ -20,11 +20,11 @@ export default function Works() {
 
 
   const [dataWorks, setDataWorks] = useState<WorkItem[]>([]);// 'any' to handle dynamic response structure
-  const { worksData } = useWorksAll(); 
-  console.log("ini worksData",worksData)
+  const { worksDataAll } = useWorksAll(); 
+
   useEffect(() => {
-    setDataWorks(worksData);
-  }, [worksData]);
+    setDataWorks(worksDataAll);
+  }, [worksDataAll]);
 
     return (    
         <main>

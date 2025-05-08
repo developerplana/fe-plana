@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import '../../[locale]/generalplana.css'; // Import global styles
 import '../../[locale]/homepage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import useWorksAll   from  '../works/usecase/useWorksAll';
+import useWorksAll  from  '../works/usecase/useWorksAll';
 
 
 export default function HomePage() {
@@ -26,11 +26,11 @@ export default function HomePage() {
 
   //get API works
   const [dataWorks, setDataWorks] = useState<WorkItem[]>([]);// 'any' to handle dynamic response structure
-  const { worksData } = useWorksAll(); 
+  const { worksDataAll } = useWorksAll(); 
 
   useEffect(() => {
-    setDataWorks(worksData);
-  }, [worksData]);
+    setDataWorks(worksDataAll);
+  }, [worksDataAll]);
 
   // if (loadingWorks) return <p>Loading...</p>;
 
@@ -71,23 +71,27 @@ export default function HomePage() {
               <div className="container-xl">
                 <div className="row d-flex">
                   <div className="col-12 col-lg-4 d-none d-lg-block">
-                    <div className="sticky">
-                      <h2 className="display-5 fw-bold">FEATURED WORKS</h2>
-                      <p>With PLANA, we live to produce films, commercials, branded content, feature length projects. Every project is a fusion of creativity, precision, and storytelling, crafted to captivate and inspire. From concept to execution, we push boundaries to create visually stunning and emotionally compelling experiences.</p>
-                      <button type="button" className="btn btn-plana fw-bold rounded-pill px-4 justify-content-end">SEE ALL WORKS</button>
-                    </div>
+                      <div className="sticky">
+                        <h2 className="display-5 fw-bold">FEATURED WORKS</h2>
+                        <p>With PLANA, we live to produce films, commercials, branded content, feature length projects. Every project is a fusion of creativity, precision, and storytelling, crafted to captivate and inspire. From concept to execution, we push boundaries to create visually stunning and emotionally compelling experiences.</p>
+                          <Link href="/works" className="btn btn-plana fw-bold rounded-pill px-4 justify-content-end">
+                            SEE ALL WORKS
+                          </Link>
+                      </div>
                   </div>
                   <div className="col-12 col-lg-4 d-block d-lg-none mb-4">
                     <h2 className="display-5 fw-bold">FEATURED WORKS</h2>
                     <p>With PLANA, we live to produce films, commercials, branded content, feature length projects. Every project is a fusion of creativity, precision, and storytelling, crafted to captivate and inspire. From concept to execution, we push boundaries to create visually stunning and emotionally compelling experiences.</p>
-                    <button type="button" className="btn btn-plana fw-bold rounded-pill px-4 justify-content-end">SEE ALL WORKS</button>
+                      <Link href="/works" className="btn btn-plana fw-bold rounded-pill px-4 justify-content-end">
+                        SEE ALL WORKS
+                      </Link>
                   </div>
                   <div className="col-12 col-lg-8">
                     <div className="row row-cols-1 row-cols-lg-2">
                       {Array.isArray(dataWorks) &&
                         dataWorks.map((item: WorkItem, index) => (
                           <div className="col mb-4" key={index}>
-                            <Link href={`/works/${item.id}`} className="text-decoration-none text-reset">
+                            <Link href={`/works/${item.titleID}`} className="text-decoration-none text-reset">
                               <div className="card card-project h-100 bg-transparent border-0">
                                 <Image
                                   src={
