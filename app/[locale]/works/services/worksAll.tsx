@@ -3,20 +3,19 @@ import axios from 'axios';
 const getWorksAll = async () => {
   try {
     const response = await axios.get('/api/worksAll');
-    console.log("ini data works service", response.data);
     return response.data;
   } catch (error) {
     throw error;
   }
 };
 
-const getWorksId = async (id: string | number) => {
+const getWorksId = async (path: string | number) => {
   try {
-    const response = await axios.get(`/api/works/${id}`);
-    console.log("✅ getWorksId response:", response.data);
+    const response = await axios.get(`/api/works/${path}`);
+    console.log("✅ getWorksPath response:", response.data);
     return response.data;
   } catch (error) {
-    console.error(`Error in getWorksId for ID ${id}:`, error);
+    console.error(`Error in getWorks for Path ${path}:`, error);
     throw error;
   }
 };

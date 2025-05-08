@@ -2,7 +2,7 @@ import { useEffect,useState } from 'react';
 import { worksAllService } from '../services';
 
 const useWorksAll = () => {
-  const [worksData, setWorksData] = useState([]); // Initialize with an empty array
+  const [worksDataAll, setWorksData] = useState([]); // Initialize with an empty array
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
@@ -23,7 +23,7 @@ const useWorksAll = () => {
     fetchData();
   }, []);
 
-  return { worksData, loading, error };
+  return { worksDataAll, loading, error };
 };
   
   export default useWorksAll;

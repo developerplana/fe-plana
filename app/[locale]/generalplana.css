@@ -155,3 +155,34 @@ ul.plana-work {
     background-size: contain;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 24 24' fill='none' stroke='%23DA0F00' strokeWidth='2' strokeLinecap='round' stroke-linejoin='round' class='lucide lucide-clapperboard-icon lucide-clapperboard'%3E%3Cpath d='M20.2 6 3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3Z'/%3E%3Cpath d='m6.2 5.3 3.1 3.9'/%3E%3Cpath d='m12.4 3.4 3.1 4'/%3E%3Cpath d='M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z'/%3E%3C/svg%3E");
   }
+
+
+  /* WYswc */
+
+  .rich-content, 
+  .rich-content * {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    word-break: break-word !important;
+  }
+  
+  .rich-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem 0;
+  }
+  
+  .rich-content video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem 0;
+  }
+  
+  .rich-content iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    margin: 1rem 0;
+  }
