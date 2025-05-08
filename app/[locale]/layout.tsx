@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -37,12 +38,13 @@ export const metadata: Metadata = {
 
 interface LayoutProps {
   params: { locale: string };
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
-export default async function LocaleLayout(props: LayoutProps) {
-  const { children, params } = props;
+export default async function LocaleLayout(props: Promise<LayoutProps>) {
+  const { params, children } = await props;
   const { locale } = params;
+
 
   // Load messages manually if needed
   if (!['en', 'id'].includes(locale)) notFound();
