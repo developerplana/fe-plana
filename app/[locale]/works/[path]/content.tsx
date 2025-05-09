@@ -111,7 +111,7 @@ export default function Page() {
                                  src={
                                     process.env.NEXT_PUBLIC_LARAVEL_BASE_URL?.includes("http://127.0.0.1:8000")
                                       ? `${item.image?.replace(/^\//, "")}`
-                                      : `${process.env.NEXT_PUBLIC_LARAVEL_BASE_URL?.replace(/\/$/, "")}/${item.image?.replace(/^\//, "")}`
+                                      : `${item.image}`
                                   }
                                 width={16} 
                                 height={9}
