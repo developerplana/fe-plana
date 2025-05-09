@@ -38,9 +38,6 @@ const nextConfig: NextConfig = {
   },
   images: {
     domains: [
-      'dropbox.com',
-      'www.dropbox.com',
-      'dl.dropboxusercontent.com',
       '127.0.0.1',
       '152.42.215.103',
     ],

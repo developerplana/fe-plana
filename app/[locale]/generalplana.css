@@ -70,28 +70,28 @@ p, a, .btn{
 
 .card.service .service-image-1{
     height: 100%;
-    background-image: url("https://www.dropbox.com/scl/fi/lizy8bloenpz4vjnw8qbl/service-2.jpg?rlkey=x9uavpi2943suv7e45td1rgyd&st=x6c9gvkj&raw=1");
+    background-image: url("/images/plana-shoot-2.webp");
     background-size: cover;
     box-shadow: inset 0 0 0 2000px rgba(30, 30, 30, 0.05);
 }
 
 .card.service .service-image-mobile-1{
     height: 200px;
-    background-image: url("https://www.dropbox.com/scl/fi/lizy8bloenpz4vjnw8qbl/service-2.jpg?rlkey=x9uavpi2943suv7e45td1rgyd&st=x6c9gvkj&raw=1");
+    background-image: url("/images/plana-shoot-2.webp");
     background-size: cover;
     box-shadow: inset 0 0 0 2000px rgba(30, 30, 30, 0.05);
 }
 
 .card.service .service-image-2{
     height: 100%;
-    background-image: url("https://www.dropbox.com/scl/fi/ov2skfkwjvy3ektxcb2lr/service-1.jpg?rlkey=t5171q1hind5zo1mcc21a6ax9&st=hvr42vef&raw=1");
+    background-image: url("/images/plana-shoot-2.webp");
     background-size: cover;
     box-shadow: inset 0 0 0 2000px rgba(30, 30, 30, 0.05);
 }
 
 .card.service .service-image-mobile-2{
     height: 200px;
-    background-image: url("https://www.dropbox.com/scl/fi/ov2skfkwjvy3ektxcb2lr/service-1.jpg?rlkey=t5171q1hind5zo1mcc21a6ax9&st=hvr42vef&raw=1");
+    background-image: url("/images/plana-shoot-2.webp");
     background-size: cover;
     box-shadow: inset 0 0 0 2000px rgba(30, 30, 30, 0.75);
 }
