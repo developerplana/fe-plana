@@ -52,7 +52,7 @@ export default function BlogDetail() {
 
       const imageUrl = dataBlogsSlug?.image
         ? process.env.NEXT_PUBLIC_LARAVEL_BASE_URL?.includes('http://127.0.0.1:8000')
-            ? dataBlogsSlug.image : `${process.env.NEXT_PUBLIC_LARAVEL_BASE_URL}/${dataBlogsSlug.image.replace(/^\//, '')}`
+            ?  `${dataBlogsSlug.image?.replace(/^\//, "")}` : `${dataBlogsSlug.image}`
             
         : null;
 
