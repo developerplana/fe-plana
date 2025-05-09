@@ -58,7 +58,6 @@ export default function BlogDetail() {
 
     return (    
         <>
-        <main>
             <div className="section px-4 px-xl-0">
                 <div className='container-xl'>
                     <div className='row justify-content-center'>
@@ -123,7 +122,6 @@ export default function BlogDetail() {
 
               </div>
             </div>
-        </main>
         </>
     );
   }

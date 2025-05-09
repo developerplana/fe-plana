@@ -8,7 +8,6 @@ import Image from 'next/image';
 export default function About() {
     return (    
         <>
-        <main>
             <div className="section headpage px-4 px-xl-0">
                 <div className="container-xl">
                     <div className="row">
@@ -170,8 +169,6 @@ export default function About() {
             <div className='section py-5 px-4 px-xl-0'>
                 <div className="py-5"></div>
             </div>
-        </main>
-        {/* <Footer/> */}
         </>
         
     );
