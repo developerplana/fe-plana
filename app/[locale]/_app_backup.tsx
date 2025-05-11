@@ -3,9 +3,9 @@ import Link from 'next/link';
 import '../[locale]/generalplana.css'; // Import global styles
 import '../[locale]/homepage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from '../[locale]/components/Navbar';
-import Footer from '../[locale]/components/Footer';
-import Social from '../[locale]/components/Social';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Social from './components/Social';
 // import {Html, Head, Main, NextScript} from 'next/document';
 
 // Import Navbar component

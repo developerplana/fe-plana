@@ -1,23 +1,22 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { NextIntlClientProvider } from "next-intl";
-import { notFound } from "next/navigation";
 import { Geist, Geist_Mono } from "next/font/google";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import {
+  NextIntlClientProvider,
+  useMessages,
+  // useTranslations,
+} from "next-intl";
+import { useLocale } from "next-intl";
 
 import Navbar from '../[locale]/components/Navbar';
 import Footer from '../[locale]/components/Footer';
 import Social from '../[locale]/components/Social';
 import Canonical from '../[locale]/components/Canonical';
-import enMessages from '../../messages/en.json';
-import idMessages from '../../messages/id.json';
+// import enMessages from '../../messages/en.json';
+// import idMessages from '../../messages/id.json';
 
-
-const MESSAGES = {
-  en: enMessages,
-  id: idMessages,
-};
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -39,20 +38,16 @@ export const metadata: Metadata = {
   },
 };
 
-interface LayoutProps {
-  params: { locale: string };
+interface RootLayoutProps {
   children: ReactNode;
+  params: { locale: string };
 }
 
-export default async function LocaleLayout(props: Promise<LayoutProps>) {
-  const { params, children } = await props;
-  const { locale } = params;
+export default  function RootLayout({ children }: RootLayoutProps) {
+  const locale = useLocale();
 
-
-  // Load messages manually if needed
-  if (!['en', 'id'].includes(locale)) notFound();
-
-  const messages = MESSAGES[locale as keyof typeof MESSAGES];
+  const messages = useMessages();
+  // const t = useTranslations();
 
 
   return (
