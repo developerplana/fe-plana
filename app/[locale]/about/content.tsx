@@ -118,7 +118,7 @@ export default function About() {
                         <div className='col-lg-4'>
                             <Image
                                 className='img-fluid'
-                                src='https://www.dropbox.com/scl/fi/it8lutpgb0x6fmeexhlyj/image-46.webp?rlkey=3cloclxiwldxlipooievn4ohe&st=68ahocx4&raw=1'
+                                src="/images/ambi.webp" 
                                 alt='description'
                                 width={800}
                                 height={600}
@@ -143,7 +143,7 @@ export default function About() {
                         <div className='col-lg-4'>
                             <Image
                                 className='img-fluid'
-                                src='https://www.dropbox.com/scl/fi/quv41lqv2p07ommlqs7zc/image.webp?rlkey=5dvwdl89b8qxtinimkefybn3a&st=wlj1dvwv&raw=1'
+                                src="/images/ambi2.webp" 
                                 alt='description'
                                 width={800}
                                 height={600}
