@@ -19,9 +19,13 @@ const Footer = () => {
         <div className={`container-xl`} >
           <div className='row align-bottom'>
             <div className='col-12 col-lg-8 align-bottom'>
-              <Image src='/images/PlanaWHITE.webp' 
-              width="120" height="60" layout="intrinsic" alt="profile"
-              className='img-fluid pb-3'></Image>              
+              <Image 
+                  src="/images/PlanaWHITE.webp" 
+                  width={120}
+                  height={60}
+                  alt="profile"
+                  className="img-fluid pb-3"
+                />
             </div>
             <div className='col-12 col-lg-4 align-bottom'>
               <p className='fs-5 text-light'>

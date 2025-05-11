@@ -36,12 +36,19 @@ const nextConfig: NextConfig = {
       },
     ]
   },
-  images: {
-    domains: [
-      '127.0.0.1',
-      '152.42.215.103',
-    ],
-  },
+  // next.config.js
+    images: {
+      remotePatterns: [
+        {
+          protocol: 'http',  // or 'https', depending on your setup
+          hostname: '127.0.0.1',
+        },
+        {
+          protocol: 'http',  // or 'https', depending on your setup
+          hostname: '152.42.215.103',
+        },
+      ],
+    },
   async rewrites() {
     return [
       {
