@@ -62,11 +62,6 @@ const Navbar = () => {
               <Link href="/contact" className={`nav-link fw-bold text-light ${styles.unactive}`}>CONTACT</Link>
             </li>
           </ul>
-          {/* <div className={`${styles.languageSwitcher} d-flex d-lg-none justify-content-center`}>
-            <Link href="#" className={`fw-bold text-light mx-2 ${styles.active}`}>EN</Link>
-                <span className='text-white fw-bold border-end border-white'> </span>
-            <Link href="#" className={`fw-bold text-light mx-2 ${styles.unactive}`}>ID</Link>
-          </div> */}
         
       </div>
     </div>
