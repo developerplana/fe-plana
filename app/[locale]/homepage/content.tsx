@@ -76,11 +76,11 @@ export default function HomePage() {
               <li></li>
               <li></li>
             </ul>
-            <Slider {...settings}>
+            {/* <Slider {...settings}>
               <div><h3>Slide 1</h3></div>
               <div><h3>Slide 2</h3></div>
               <div><h3>Slide 3</h3></div>
-            </Slider>
+            </Slider> */}
           </div>
           <div className="anti-hero" id="anti-hero">
             <div className="section px-4 px-xl-0">
