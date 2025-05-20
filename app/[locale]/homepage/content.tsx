@@ -6,17 +6,17 @@ import '../../[locale]/generalplana.css'; // Import global styles
 import '../../[locale]/homepage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import useWorksAll  from  '../works/usecase/useWorksAll';
-import Slider from "react-slick";
+// import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const settings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1
-};
+// const settings = {
+//   dots: true,
+//   infinite: true,
+//   speed: 500,
+//   slidesToShow: 1,
+//   slidesToScroll: 1
+// };
 
 
 export default function HomePage() {
