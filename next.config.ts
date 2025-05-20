@@ -47,6 +47,11 @@ const nextConfig: NextConfig = {
           protocol: 'http',  // or 'https', depending on your setup
           hostname: '152.42.215.103',
         },
+        {
+          protocol: 'http',
+          hostname: 'admin.plana.vision',
+          pathname: '/storage/uploads/**',
+        },
       ],
     },
   async rewrites() {
