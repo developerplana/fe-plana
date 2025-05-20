@@ -16,6 +16,7 @@ export default function Works() {
     titleID: string;
     image: string;
     imageDesc:string;
+    slug:string;
   };
 
 
@@ -40,7 +41,7 @@ export default function Works() {
             <div className="row row-cols-1 row-cols-lg-3">
               {Array.isArray(dataWorks) &&
                 dataWorks.map((item: WorkItem, index) => (
-                  <Link key={index} href={`/works/${item.id}`} className="text-decoration-none text-reset">
+                  <Link key={index} href={`/works/${item.slug}`} className="text-decoration-none text-reset">
                     <div className="col">
                       <div className="card card-project h-100 bg-transparent border-0">
                         <Image
