@@ -50,11 +50,7 @@ export default function BlogDetail() {
         
       }, [blogsData, blogsDataSlug]);
 
-      const imageUrl = dataBlogsSlug?.image
-        ? process.env.NEXT_PUBLIC_LARAVEL_BASE_URL?.includes('http://127.0.0.1:8000')
-            ?  `${dataBlogsSlug.image?.replace(/^\//, "")}` : `${dataBlogsSlug.image}`
-            
-        : null;
+      const imageUrl = dataBlogsSlug?.image;
 
     return (    
         <>
@@ -91,11 +87,7 @@ export default function BlogDetail() {
                             <div key={index} className="col mb-4">
                                 <div className="card card-blog h-100 border-0">
                                     <Image
-                                    src={
-                                        process.env.NEXT_PUBLIC_LARAVEL_BASE_URL?.includes("http://127.0.0.1:8000")
-                                        ? `${item.image?.replace(/^\//, "")}`
-                                        : `${item.image}`
-                                    }
+                                    src={item.image}
                                     width={16}
                                     height={9}
                                     layout="responsive"
