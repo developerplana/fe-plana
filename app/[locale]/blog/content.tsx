@@ -49,11 +49,7 @@ export default function Blog() {
                             <div className="col mb-4" key={index}>
                                 <div className="card card-blog h-100 border-0">
                                     <Image
-                                    src={
-                                        process.env.NEXT_PUBLIC_LARAVEL_BASE_URL?.includes("http://127.0.0.1:8000")
-                                        ? `${item.image?.replace(/^\//, "")}`
-                                        : `${item.image}`
-                                    }
+                                    src={item.image}
                                     width={1}
                                     height={1}
                                     layout="responsive"
