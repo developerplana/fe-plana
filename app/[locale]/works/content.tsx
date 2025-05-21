@@ -45,9 +45,7 @@ export default function Works() {
                     <div className="col">
                       <div className="card card-project h-100 bg-transparent border-0">
                         <Image
-                          src={process.env.NEXT_PUBLIC_LARAVEL_BASE_URL?.includes("http://127.0.0.1:8000")
-                            ? `${item.image?.replace(/^\//, "")}`
-                            : `${item.image}`}
+                          src={item.image}
                           width={16}
                           height={9} layout="responsive"
                           className="card-img-top mb-1 rounded-2"
