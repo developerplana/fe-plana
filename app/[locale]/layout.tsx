@@ -5,7 +5,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import {
   NextIntlClientProvider,
   useMessages,
-  // useTranslations,
 } from "next-intl";
 import { useLocale } from "next-intl";
 
@@ -13,8 +12,6 @@ import Navbar from '../[locale]/components/Navbar';
 import Footer from '../[locale]/components/Footer';
 import Social from '../[locale]/components/Social';
 import Canonical from '../[locale]/components/Canonical';
-// import enMessages from '../../messages/en.json';
-// import idMessages from '../../messages/id.json';
 
 
 const geistSans = Geist({
