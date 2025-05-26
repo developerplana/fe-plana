@@ -12,6 +12,7 @@ import Navbar from '../[locale]/components/Navbar';
 import Footer from '../[locale]/components/Footer';
 import Social from '../[locale]/components/Social';
 import Canonical from '../[locale]/components/Canonical';
+import Script from "next/script";
 
 
 const geistSans = Geist({
@@ -49,6 +50,19 @@ export default  function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang={locale} className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
       <body>
+          <Script
+              src="https://www.googletagmanager.com/gtag/js?id=G-VN0N9N12ZG"
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'G-VN0N9N12ZG');
+              `}
+          </Script>
         <Canonical />
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Navbar />
