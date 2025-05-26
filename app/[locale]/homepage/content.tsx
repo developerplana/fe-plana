@@ -7,16 +7,9 @@ import '../../[locale]/homepage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import useWorksAll  from  '../works/usecase/useWorksAll';
 // import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 
-// const settings = {
-//   dots: true,
-//   infinite: true,
-//   speed: 500,
-//   slidesToShow: 1,
-//   slidesToScroll: 1
-// };
 
 
 export default function HomePage() {
@@ -76,11 +69,7 @@ export default function HomePage() {
               <li></li>
               <li></li>
             </ul>
-            {/* <Slider {...settings}>
-              <div><h3>Slide 1</h3></div>
-              <div><h3>Slide 2</h3></div>
-              <div><h3>Slide 3</h3></div>
-            </Slider> */}
+            
           </div>
           <div className="anti-hero" id="anti-hero">
             <div className="section px-4 px-xl-0">

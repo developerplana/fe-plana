@@ -4,10 +4,37 @@ import Image from 'next/image';
 import styles from '../navbar.module.css'; // Custom styles
 import Switcher from './Switcher';
 import { useParams } from 'next/navigation';
+import { useEffect } from 'react';
 
 const Navbar = () => {
   const params = useParams();
-  const locale = typeof params?.locale === 'string' ? params.locale : 'en'; // fallback to 'en'
+  const locale = typeof params?.locale === 'string' ? params.locale : 'en';
+
+  useEffect(() => {
+    import('bootstrap/dist/js/bootstrap.bundle.min.js').then(({ Offcanvas }) => {
+      const offcanvasEl = document.getElementById('offcanvasDarkNavbar');
+      if (!offcanvasEl) return;
+
+      const offcanvasInstance = Offcanvas.getOrCreateInstance(offcanvasEl);
+
+      const links = offcanvasEl.querySelectorAll('.nav-link');
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          offcanvasInstance.hide();
+        });
+      });
+
+      return () => {
+        links.forEach(link => {
+          link.removeEventListener('click', () => {
+            offcanvasInstance.hide();
+          });
+        });
+      };
+    });
+  }, []);
+
+
 
   return (
     <nav className={`navbar navbar-dark fixed-top navbar-expand-lg ${styles.navbar}`}>
