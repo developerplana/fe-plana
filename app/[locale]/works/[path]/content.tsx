@@ -9,6 +9,18 @@ import useWorksPath from  '../usecase/useWorksId';
 import useWorksAll from '../usecase/useWorksAll';
 import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1
+  };
+  
 
 export default function Page() {
     const params = useParams();
@@ -87,6 +99,39 @@ export default function Page() {
                                 <div className='col-12 col-lg-5'>
                                     <p className='mb-0'>Client</p>
                                     <p className='fw-bold text-uppercase'>{dataWorks?.client}</p>
+                                </div>
+                            </div>
+                            <div className='row'>
+                                <div className='col-12'>
+                                <Slider {...settings}>
+                                    <div>
+                                        <Image
+                                        className='img-fluid p-2'
+                                        src='/images/helm.webp'
+                                        alt='description'
+                                        width={800} // you can adjust this
+                                        height={600} // adjust this too
+                                        />
+                                    </div>
+                                    <div>
+                                        <Image
+                                        className='img-fluid p-2'
+                                        src='/images/helm.webp'
+                                        alt='description'
+                                        width={800} // you can adjust this
+                                        height={600} // adjust this too
+                                        />
+                                    </div>
+                                    <div>
+                                        <Image
+                                        className='img-fluid p-2'
+                                        src='/images/helm.webp'
+                                        alt='description'
+                                        width={800} // you can adjust this
+                                        height={600} // adjust this too
+                                        />
+                                    </div>
+                                </Slider>
                                 </div>
                             </div>
                         </div>
