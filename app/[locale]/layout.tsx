@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { Geist, Geist_Mono } from "next/font/google";
+// import { Geist, Geist_Mono } from "next/font/google";
 
 import {
   NextIntlClientProvider,
@@ -14,16 +14,32 @@ import Social from '../[locale]/components/Social';
 import Canonical from '../[locale]/components/Canonical';
 import Script from "next/script";
 
+import { Exo, Montserrat } from 'next/font/google'
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const exo = Exo({
+  subsets: ['latin'],
+  weight: ['400', '600', '700'],
+  variable: '--font-exo',
+  display: 'swap',
+})
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['300', '400', '500'],
+  variable: '--font-montserrat',
+  display: 'swap',
+})
+
+
+// const geistSans = Geist({
+//   variable: "--font-geist-sans",
+//   subsets: ["latin"],
+// });
+
+// const geistMono = Geist_Mono({
+//   variable: "--font-geist-mono",
+//   subsets: ["latin"],
+// });
 
 export const metadata: Metadata = {
   title: "Plana",
@@ -48,7 +64,7 @@ export default  function RootLayout({ children }: RootLayoutProps) {
 
 
   return (
-    <html lang={locale} className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+    <html lang={locale} className={`${exo.variable} ${montserrat.variable} antialiased`}>
       <body>
           <Script
               src="https://www.googletagmanager.com/gtag/js?id=G-VN0N9N12ZG"
