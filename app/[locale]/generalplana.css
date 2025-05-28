@@ -70,28 +70,42 @@ p, a, .btn{
 
 .card.service .service-image-1{
     height: 100%;
-    background-image: url("/images/plana-shoot-2.webp");
+    background-image: url("/images/service/service-1.webp");
     background-size: cover;
     box-shadow: inset 0 0 0 2000px rgba(30, 30, 30, 0.05);
 }
 
 .card.service .service-image-mobile-1{
     height: 200px;
-    background-image: url("/images/plana-shoot-2.webp");
+    background-image: url("/images/service/service-1.webp");
     background-size: cover;
     box-shadow: inset 0 0 0 2000px rgba(30, 30, 30, 0.05);
 }
 
 .card.service .service-image-2{
     height: 100%;
-    background-image: url("/images/plana-shoot-2.webp");
+    background-image: url("/images/service/service-2.webp");
     background-size: cover;
     box-shadow: inset 0 0 0 2000px rgba(30, 30, 30, 0.05);
 }
 
 .card.service .service-image-mobile-2{
     height: 200px;
-    background-image: url("/images/plana-shoot-2.webp");
+    background-image: url("/images/service/service-2.webp");
+    background-size: cover;
+    box-shadow: inset 0 0 0 2000px rgba(30, 30, 30, 0.75);
+}
+
+.card.service .service-image-3{
+    height: 100%;
+    background-image: url("/images/service/service-3.webp");
+    background-size: cover;
+    box-shadow: inset 0 0 0 2000px rgba(30, 30, 30, 0.05);
+}
+
+.card.service .service-image-mobile-3{
+    height: 200px;
+    background-image: url("/images/service/service-3.webp");
     background-size: cover;
     box-shadow: inset 0 0 0 2000px rgba(30, 30, 30, 0.75);
 }

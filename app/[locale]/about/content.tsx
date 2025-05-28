@@ -71,13 +71,13 @@ export default function About() {
                             </h3>
                         </div>
                         <div className='col-12'>
-                            <div className="card mb-3 bg-transparent service rounded-4">
+                            <div className="card mb-4 bg-transparent service rounded-4">
                                 <div className="row g-0">
-                                    <div className="col-lg-4">
+                                    <div className="col-lg-3">
                                         <div className='service-image-1 d-none d-lg-block rounded-start-4'></div>
                                         <div className='service-image-mobile-1 d-block d-lg-none rounded-top-4'></div>
                                     </div>
-                                    <div className="col-lg-8">
+                                    <div className="col-lg-9">
                                         <div className="card-body py-4">
                                             <h3 className="card-title display-6 fw-bold">VIDEO PRODUCTION SERVICES</h3>
                                             <p className="card-text">We offer comprehensive full production services that take your project from concept to completion. We meticulously assemble the perfect team for each project, ensuring that every detail aligns with your vision. From pre-production planning to on-set execution, and through to post-production supervision, we handle every aspect with precision and expertise. Our goal is to deliver a seamless experience that results in high-quality, impactful content.</p>
@@ -87,16 +87,32 @@ export default function About() {
                             </div>
                         </div>
                         <div className='col-12'>
-                            <div className='card mb-3 bg-transparent service rounded-4'>
+                            <div className='card mb-4 bg-transparent service rounded-4'>
                                 <div className="row g-0">
-                                    <div className="col-md-4">
+                                    <div className="col-md-3">
                                     <div className='service-image-2 d-none d-lg-block rounded-start-4'></div>
                                     <div className='service-image-mobile-2 d-block d-lg-none rounded-top-4'></div>
                                     </div>
-                                    <div className="col-md-8">
+                                    <div className="col-md-9">
                                         <div className="card-body py-4">
                                         <h3 className="card-title display-6 fw-bold">FULL ANIMATION</h3>
                                         <p className="card-text">Our Full Animation service is designed to integrate and streamline various post-production elements into a cohesive and visually stunning final product. We collaborate with top-tier animators, CG artists, AI artists, and musicians, carefully selecting the right director to bring the creative vision to life. By managing the entire post-production pipeline, we ensure that all aspects of the project are harmoniously aligned, delivering a polished and immersive visual experience.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='col-12'>
+                            <div className='card mb-4 bg-transparent service rounded-4'>
+                                <div className="row g-0">
+                                    <div className="col-md-3">
+                                    <div className='service-image-3 d-none d-lg-block rounded-start-4'></div>
+                                    <div className='service-image-mobile-3 d-block d-lg-none rounded-top-4'></div>
+                                    </div>
+                                    <div className="col-md-9">
+                                        <div className="card-body py-4">
+                                        <h3 className="card-title display-6 fw-bold">PHOTOGRAPHY</h3>
+                                        <p className="card-text">Our Photography service is built to support commercial goals with clarity and creative intent. We craft visual assets that speak to your brand’s identity, whether for advertising campaigns, product launches, or editorial features. From pre-shoot planning to final image delivery, we manage the entire process with the same precision and collaborative spirit that defines our motion work. By assembling the right creative team for each project, we ensure every frame aligns with your message and meets the demands of high-impact visual storytelling.</p>
                                         </div>
                                     </div>
                                 </div>
