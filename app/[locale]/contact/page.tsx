@@ -19,7 +19,7 @@ export default function Contact() {
                 <div className="container-xl">
                     <div className="row">
                         <div className="col-12">
-                            <h2 className='text-uppercase display-5 fw-bold'>SAY HI, DON’T BE SHY.<br/> 
+                            <h2 className='text-uppercase display-6 fw-bold'>SAY HI, DON’T BE SHY.<br/> 
                             DROP US A LINE AND MAKE SOMETHING HAPPEN.</h2>
                         </div>
                     </div>

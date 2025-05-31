@@ -40,11 +40,11 @@ export default function HomePage() {
 
     return (
       <><main>
-          <div className="section py-5 px-4 px-xl-0">
-            <div className="container-xl">
+          <div className="section py-4 py-lg-5 px-2 px-xl-0">
+            <div className="container-xl py-4 py-lg-5">
               <div className="row hero gy-0 gy-lg-5">
                 <div className="col-12 col-lg-7 col-xl-6">
-                  <h1 className="display-2 fw-bold">BE IN THE PLANA.<br />
+                  <h1 className="display-4 fw-bold">BE IN THE PLANA.<br />
                     GO FORWARD WITH COMFORT.</h1>
                   <p className="d-block d-lg-none">Saddle up! Plana is the mustang of advertising film production, delivering fast, creative solutions for local and international clients. No project is too wild—ride toward success with Plana!</p>
                 </div>
@@ -77,7 +77,7 @@ export default function HomePage() {
                 <div className="row d-flex">
                   <div className="col-12 col-lg-4 d-none d-lg-block">
                       <div className="sticky">
-                        <h2 className="display-5 fw-bold">FEATURED WORKS</h2>
+                        <h2 className="display-6 fw-bold">FEATURED WORKS</h2>
                         <p>With PLANA, we live to produce films, commercials, branded content, feature length projects. Every project is a fusion of creativity, precision, and storytelling, crafted to captivate and inspire. From concept to execution, we push boundaries to create visually stunning and emotionally compelling experiences.</p>
                           <Link href="/works" className="btn btn-plana fw-bold rounded-pill px-4 justify-content-end">
                             SEE ALL WORKS
@@ -85,7 +85,7 @@ export default function HomePage() {
                       </div>
                   </div>
                   <div className="col-12 col-lg-4 d-block d-lg-none mb-4">
-                    <h2 className="display-5 fw-bold">FEATURED WORKS</h2>
+                    <h2 className="display-6 fw-bold">FEATURED WORKS</h2>
                     <p>With PLANA, we live to produce films, commercials, branded content, feature length projects. Every project is a fusion of creativity, precision, and storytelling, crafted to captivate and inspire. From concept to execution, we push boundaries to create visually stunning and emotionally compelling experiences.</p>
                       <Link href="/works" className="btn btn-plana fw-bold rounded-pill px-4 justify-content-end">
                         SEE ALL WORKS
@@ -148,7 +148,7 @@ export default function HomePage() {
               <div className="container-xl">
                 <div className="row">
                   <div className="col-12">
-                    <h2 className="display-3 fw-bold py-5">WE BELIEVE IN THE CRAFT OF EXCEPTIONAL FILMMAKING. WE MERGE AESTHETICS AND STRATEGY TO BUILD COMPELLING NARRATIVES TO CONNECT, ENGANGE AMD LEAVE A LASTING IMPACT.</h2>
+                    <h2 className="display-5 fw-bold py-5">WE BELIEVE IN THE CRAFT OF EXCEPTIONAL FILMMAKING. WE MERGE AESTHETICS AND STRATEGY TO BUILD COMPELLING NARRATIVES TO CONNECT, ENGANGE AMD LEAVE A LASTING IMPACT.</h2>
                     <button type="button" className="btn btn-plana fw-bold rounded-pill px-4 float-end">MORE ABOUT PLANA</button>
                   </div>
                 </div>
