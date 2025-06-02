@@ -12,7 +12,7 @@ export default function About() {
                 <div className="container-xl">
                     <div className="row">
                         <div className="col-12">
-                            <h2 className='text-uppercase display-5 fw-bold'>WE BELIEVE IN THE CRAFT OF EXCEPTIONAL FILMMAKING.</h2>
+                            <h2 className='text-uppercase display-6 fw-bold'>WE BELIEVE IN THE CRAFT OF EXCEPTIONAL FILMMAKING.</h2>
                         </div>
                     </div>
                 </div>
@@ -21,7 +21,7 @@ export default function About() {
                 <div className='container-xl'>
                     <div className='row'>
                         <div className='col-12 col-lg-2'>
-                            <h2 className='text-uppercase display-5 fw-bold'>
+                            <h2 className='text-uppercase display-6 fw-bold'>
                                 About Plana
                             </h2>
                         </div>
@@ -66,7 +66,7 @@ export default function About() {
                  <div className="container-xl">
                     <div className='row'>
                     <div className='col-12'>
-                            <h3 className='text-uppercase display-5 fw-bold mb-4'>
+                            <h3 className='text-uppercase display-6 fw-bold mb-4'>
                                 Our Service
                             </h3>
                         </div>
@@ -79,7 +79,7 @@ export default function About() {
                                     </div>
                                     <div className="col-lg-9">
                                         <div className="card-body py-4">
-                                            <h3 className="card-title display-6 fw-bold">VIDEO PRODUCTION SERVICES</h3>
+                                            <h3 className="card-title h2 fw-bold">VIDEO PRODUCTION SERVICES</h3>
                                             <p className="card-text">We offer comprehensive full production services that take your project from concept to completion. We meticulously assemble the perfect team for each project, ensuring that every detail aligns with your vision. From pre-production planning to on-set execution, and through to post-production supervision, we handle every aspect with precision and expertise. Our goal is to deliver a seamless experience that results in high-quality, impactful content.</p>
                                         </div>
                                     </div>
@@ -95,7 +95,7 @@ export default function About() {
                                     </div>
                                     <div className="col-md-9">
                                         <div className="card-body py-4">
-                                        <h3 className="card-title display-6 fw-bold">FULL ANIMATION</h3>
+                                        <h3 className="card-title h2 fw-bold">FULL ANIMATION</h3>
                                         <p className="card-text">Our Full Animation service is designed to integrate and streamline various post-production elements into a cohesive and visually stunning final product. We collaborate with top-tier animators, CG artists, AI artists, and musicians, carefully selecting the right director to bring the creative vision to life. By managing the entire post-production pipeline, we ensure that all aspects of the project are harmoniously aligned, delivering a polished and immersive visual experience.</p>
                                         </div>
                                     </div>
@@ -111,7 +111,7 @@ export default function About() {
                                     </div>
                                     <div className="col-md-9">
                                         <div className="card-body py-4">
-                                        <h3 className="card-title display-6 fw-bold">PHOTOGRAPHY</h3>
+                                        <h3 className="card-title h2 fw-bold">PHOTOGRAPHY</h3>
                                         <p className="card-text">Our Photography service is built to support commercial goals with clarity and creative intent. We craft visual assets that speak to your brand’s identity, whether for advertising campaigns, product launches, or editorial features. From pre-shoot planning to final image delivery, we manage the entire process with the same precision and collaborative spirit that defines our motion work. By assembling the right creative team for each project, we ensure every frame aligns with your message and meets the demands of high-impact visual storytelling.</p>
                                         </div>
                                     </div>
@@ -125,7 +125,7 @@ export default function About() {
                  <div className='container-xl'>
                     <div className='row mb-5'>
                         <div className='col-12'>
-                            <h3 className='text-uppercase display-5 fw-bold'>
+                            <h3 className='text-uppercase display-6 fw-bold'>
                                 Founders
                             </h3>
                         </div>
@@ -143,7 +143,7 @@ export default function About() {
                         <div className='col-lg-8'>
                             <figure>
                                 <blockquote className="blockquote">
-                                    <h4 className='fw-bold display-6'>AMBI FAURI</h4>
+                                    <h4 className='fw-bold h2'>AMBI FAURI</h4>
                                 </blockquote>
                                 <figcaption className="blockquote-footer">
                                     <span className='h5 text-light'>Executive Producer</span>
@@ -168,7 +168,7 @@ export default function About() {
                         <div className='col-lg-8'>
                             <figure>
                                 <blockquote className="blockquote">
-                                    <h4 className='fw-bold display-6'>EDIWN SYAMSUDDIN</h4>
+                                    <h4 className='fw-bold h2'>EDWIN SYAMSUDDIN</h4>
                                 </blockquote>
                                 <figcaption className="blockquote-footer">
                                     <span className='h5 text-light'>Finance Director</span>
