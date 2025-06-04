@@ -62,7 +62,7 @@ export default function Contact() {
                                 </div>
                                 <div className="mb-4">
                                     <label className="form-label h5 fw-bold text-uppercase">Subject</label>
-                                    <input type="email" className="form-control" id="exampleFormControlInput1" placeholder=""/>
+                                    <input type="text" className="form-control" id="exampleFormControlInput1" placeholder=""/>
                                 </div>
                                 <div className="mb-4">
                                     <label className="form-label h5 fw-bold text-uppercase">Message</label>

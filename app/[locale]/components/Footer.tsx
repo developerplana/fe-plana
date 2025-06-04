@@ -1,6 +1,7 @@
 // import Link from 'next/link';
 import styles from '../footer.module.css'; // Custom styles
 import Image from 'next/image';
+import Link from "next/link";
 
 const Footer = () => {
     return (
@@ -10,7 +11,8 @@ const Footer = () => {
             <div className='row justify-content-center'>
                 <div className='col-12'>
                   <p className='display-5 fw-bold text-light'>GOT A PROJECT IN MIND?</p>
-                  <button type="button" className="btn btn-plana fw-bold rounded-pill px-4 justify-content-end">LETS TALK</button>
+                  <Link href="/contact" className="btn btn-plana fw-bold rounded-pill px-4 justify-content-end">LETS TALK</Link>
+                  
                 </div>
             </div>
           </div>
