@@ -1,4 +1,4 @@
-
+import type { Metadata } from "next";
 import type { ReactNode } from "react";
 // import { Geist, Geist_Mono } from "next/font/google";
 
@@ -31,6 +31,44 @@ const montserrat = Montserrat({
 })
 
 
+
+async function getPageData() {
+  
+  const pathSegment = 'home'
+  
+  const baseUrl = process.env.NEXT_PUBLIC_API_URL ?? 'http://127.0.0.1:8000';
+
+  const res = await fetch(`${baseUrl}/api/metatag/${pathSegment}`, {
+    next: { revalidate: 60 },
+  });
+
+  return res.json();
+}
+
+
+type Props = {
+  params: Promise<{ locale: string }>
+}
+
+ 
+export async function generateMetadata(
+  { params }: Props,
+): Promise<Metadata> {
+
+  const data = await getPageData();
+  const keywordsArray = typeof data.meta_keywords === 'string'
+  ? data.meta_keywords.split(',').map((kw: string) => kw.trim())
+  : data.meta_keywords || [];
+
+  return {
+    title: data.meta_title,
+    description: data.meta_description,
+    keywords: keywordsArray,
+    alternates: {
+      canonical: `https://plana.vision/${(await params).locale}`, // adjust with full path if needed
+    }
+  }
+}
 
 interface RootLayoutProps {
   children: ReactNode;
