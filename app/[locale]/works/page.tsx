@@ -1,5 +1,6 @@
 import { NextIntlClientProvider, useLocale, useMessages } from "next-intl";
 import Content from "./content";
+import type { Metadata } from "next";
 
 async function getPageData() {
   
@@ -14,16 +15,31 @@ async function getPageData() {
     
     return res.json();
   }
- 
-export async function generateMetadata() {
+
+
+  export async function generateMetadata(
+    props: { params: Promise<{ locale: string, slug: string }> }
+  ): Promise<Metadata> {
+    const { locale } = await props.params;
+
+    
   const data = await getPageData();
- 
-    return {
-      title: data.meta_title,
-      description: data.meta_description,
-      keywords: data.meta_keywords,
-    };
+  const safeData = data ?? [];  
+  const keywordsArray = typeof safeData.meta_keywords === 'string'
+  ? safeData.meta_keywords.split(',').map((kw: string) => kw.trim())
+  : safeData.meta_keywords || [];
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.plana.vision';
+
+  return {
+    title: safeData.meta_title,
+    description: safeData.meta_description,
+    keywords: keywordsArray,
+    alternates: {
+      canonical:`${baseUrl}/${locale}/works`, 
+    }
+  };
 }
+
 
 export default function Page() {
   const locale = useLocale();
