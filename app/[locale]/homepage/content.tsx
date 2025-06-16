@@ -93,52 +93,40 @@ export default function HomePage() {
                   </div>
                   <div className="col-12 col-lg-8">
                     <div className="row row-cols-1 row-cols-lg-2">
-                      {Array.isArray(dataWorks) &&
-                        dataWorks.map((item: WorkItem, index) => (
-                          <div className="col mb-4" key={index}>
-                            <Link href={`/works/${item.titleID}`} className="text-decoration-none text-reset">
-                              <div className="card card-project h-100 bg-transparent border-0">
-                                <Image
-                                  src={
-                                    process.env.NEXT_PUBLIC_LARAVEL_BASE_URL?.includes("http://127.0.0.1:8000")
-                                      ? `${item.image?.replace(/^\//, "")}`
-                                      : `${item.image}`
-                                  }
-                                  width={1}
-                                  height={1}
-                                  layout="responsive"
-                                  className="card-img-top mb-1 rounded-2"
-                                  alt={item.imageDesc} />
-                                <div className="card-body p-0">
-                                  <div className="row g-0">
-                                    <div className="col-1 pt-1">
-                                      <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="27"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        strokeWidth="2"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        className="lucide lucide-camera-icon lucide-camera project-icon"
-                                      >
-                                        <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" />
-                                        <circle cx="12" cy="13" r="3" />
-                                      </svg>
-                                    </div>
-                                    <div className="col-11">
-                                      <p className="card-title text-uppercase fw-bold">
-                                        {item.titleID}
-                                      </p>
-                                    </div>
-                                  </div>
+                    {Array.isArray(dataWorks) &&
+                    dataWorks.slice(0, 6).map((item: WorkItem, index) => (
+                      <div className="col mb-4" key={index}>
+                        <Link href={`/works/${item.titleID}`} className="text-decoration-none text-reset">
+                          <div className="card card-project h-100 bg-transparent border-0">
+                            <Image
+                              src={
+                                process.env.NEXT_PUBLIC_LARAVEL_BASE_URL?.includes("http://127.0.0.1:8000")
+                                  ? `${item.image?.replace(/^\//, "")}`
+                                  : `${item.image}`
+                              }
+                              width={1}
+                              height={1}
+                              layout="responsive"
+                              className="card-img-top mb-1 rounded-2"
+                              alt={item.imageDesc}
+                            />
+                            <div className="card-body p-0">
+                              <div className="row g-0">
+                                <div className="col-1 pt-1">
+                                  {/* your SVG here */}
+                                </div>
+                                <div className="col-11">
+                                  <p className="card-title text-uppercase fw-bold">
+                                    {item.titleID}
+                                  </p>
                                 </div>
                               </div>
-                            </Link>
+                            </div>
                           </div>
-                        ))}
+                        </Link>
+                      </div>
+                    ))}
+
                     </div>
                   </div>
                 </div>

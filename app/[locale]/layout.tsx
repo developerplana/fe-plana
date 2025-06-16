@@ -42,6 +42,7 @@ async function getPageData() {
     next: { revalidate: 60 },
   });
 
+  console.log("ini res",res)
   return res.json();
 }
 
@@ -65,7 +66,7 @@ export async function generateMetadata(
     description: data.meta_description,
     keywords: keywordsArray,
     icons: {
-      icon: '/favicon.ico',
+      icon: '/images/favicon.ico',
     },
     alternates: {
       canonical: `https://plana.vision/${(await params).locale}`, // adjust with full path if needed
