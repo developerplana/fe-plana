@@ -6,7 +6,7 @@ import Head from 'next/head';
 
 export default function Canonical() {
   const pathname = usePathname();
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.plana.vision';
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://plana.vision';
   const canonicalUrl = `${baseUrl}${pathname === '/' ? '' : pathname}`.split('?')[0];
 
   return (

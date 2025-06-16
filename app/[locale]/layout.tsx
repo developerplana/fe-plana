@@ -64,6 +64,9 @@ export async function generateMetadata(
     title: data.meta_title,
     description: data.meta_description,
     keywords: keywordsArray,
+    icons: {
+      icon: '/favicon.ico',
+    },
     alternates: {
       canonical: `https://plana.vision/${(await params).locale}`, // adjust with full path if needed
     }
