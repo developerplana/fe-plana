@@ -3,6 +3,7 @@ import axios from 'axios';
 const getWorksAll = async () => {
   try {
     const response = await axios.get('/api/worksAll');
+    console.log("ini works response",response.data)
     return response.data;
   } catch (error) {
     throw error;

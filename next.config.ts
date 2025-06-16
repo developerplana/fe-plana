@@ -41,7 +41,7 @@ const nextConfig: NextConfig = {
       remotePatterns: [
         {
           protocol: 'http',  // or 'https', depending on your setup
-          hostname: '127.0.0.1',
+          hostname: '127.0.0.1:8000',
         },
         {
           protocol: 'http',  // or 'https', depending on your setup
@@ -51,6 +51,17 @@ const nextConfig: NextConfig = {
           protocol: 'https',
           hostname: 'admin.plana.vision',
           pathname: '/storage/uploads/**',
+        },
+        {
+          protocol: 'http',
+          hostname: '127.0.0.1:8000',
+          pathname: '/storage/uploads/**',
+        },
+        {
+          protocol: 'http',
+          hostname: '127.0.0.1',
+          port: '8000', // optional if needed
+          pathname: '/storage/**',
         },
       ],
     },
