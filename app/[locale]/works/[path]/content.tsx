@@ -70,7 +70,7 @@ export default function Page() {
                 <div className="container-xl">
                     <div className="row">
                         <div className="col-12">
-                            <h2 className='text-uppercase display-5 fw-bold'>Every project is crafted to captivate and inspire.</h2>
+                            <h1 className='text-uppercase display-5 fw-bold'>Every project is crafted to captivate and inspire.</h1>
                         </div>
                     </div>
                 </div>
@@ -98,9 +98,7 @@ export default function Page() {
                                 ) : (
                                 <p>No video available.</p>
                             )}
-                            <p>
-                                {dataWorks?.descID}
-                            </p>
+                           
                             <div className='row'>
                                 <div className='col-12 col-lg-4'>
                                     <p className='mb-0'>Director</p>
@@ -132,6 +130,9 @@ export default function Page() {
                                 </Slider>
                                 </div>
                             </div>
+                            <p>
+                                {dataWorks?.descID}
+                            </p>
                         </div>
                     </div>
                 </div>

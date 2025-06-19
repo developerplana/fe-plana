@@ -58,7 +58,7 @@ export default function BlogDetail() {
                 <div className='container-xl'>
                     <div className='row justify-content-center'>
                         <div className="col-12 col-lg-10">
-                            <h2 className='text-uppercase fw-bold mb-4'>{dataBlogsSlug?.titleID}</h2>
+                            <h1 className='text-uppercase fw-bold mb-4'>{dataBlogsSlug?.titleID}</h1>
                             {imageUrl && (
                                 <Image 
                                 src={imageUrl}
