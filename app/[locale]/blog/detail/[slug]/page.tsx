@@ -23,15 +23,15 @@ export async function generateMetadata(
   const data = await getPageData(slug);
   const safeData = data ?? {};
 
-  const keywordsArray = typeof safeData.meta_keywords === 'string'
-    ? safeData.meta_keywords.split(',').map((kw: string) => kw.trim())
-    : safeData.meta_keywords || [];
+  const keywordsArray = typeof safeData.metaKeywordEN === 'string'
+    ? safeData.metaKeywordEN.split(',').map((kw: string) => kw.trim())
+    : safeData.metaKeywordEN || [];
 
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://plana.vision';
 
   return {
-    title: safeData.meta_title,
-    description: safeData.meta_description,
+    title: safeData.metaTitleEN,
+    description: safeData.metaDescEN,
     keywords: keywordsArray,
     alternates: {
       canonical: `${baseUrl}/${locale}/${slug}`,
