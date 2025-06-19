@@ -108,10 +108,10 @@ export default function Page() {
                                     <p className='mb-0'>Production Year</p>
                                     <p className='fw-bold text-uppercase'>{dataWorks?.yearProduction}</p>
                                 </div>
-                                <div className='col-12 col-lg-5'>
+                                {/* <div className='col-12 col-lg-5'>
                                     <p className='mb-0'>Client</p>
                                     <p className='fw-bold text-uppercase'>{dataWorks?.client}</p>
-                                </div>
+                                </div> */}
                             </div>
                             <div className='row'>
                                 <div className='col-12'>
