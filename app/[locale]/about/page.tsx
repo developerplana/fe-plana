@@ -14,14 +14,9 @@ async function getPageData() {
   return res.json();
 }
 
-type Props = {
-  params: Promise<{ locale: string }>
-}
 
  
-export async function generateMetadata(
-  { params }: Props,
-): Promise<Metadata> {
+export async function generateMetadata(): Promise<Metadata> {
 
   const data = await getPageData();
   const keywordsArray =
@@ -34,7 +29,7 @@ export async function generateMetadata(
     description: data.meta_description,
     keywords: keywordsArray,
     alternates: {
-      canonical: `https://plana.vision/${(await params).locale}/about`,
+      canonical: `https://plana.vision/about`,
     },
   };
 }
@@ -42,7 +37,6 @@ export async function generateMetadata(
 export default function Page() {
   const locale = useLocale();
 
-  console.log("ini locale",locale)
   const messages = useMessages();
 
   return (

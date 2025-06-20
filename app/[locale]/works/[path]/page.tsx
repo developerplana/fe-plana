@@ -19,7 +19,7 @@ async function getPageData(params: string) {
 export async function generateMetadata(
   props: { params: Promise<{ locale: string, path: string }> }
 ): Promise<Metadata> {
-  const { locale,path } = await props.params;
+  const { path } = await props.params;
 
   const data = await getPageData(path);
   const safeData = data ?? [];  
@@ -33,7 +33,7 @@ export async function generateMetadata(
     description: safeData.metaDescEN,
     keywords: keywordsArray,
     alternates: {
-      canonical:`${baseUrl}/${locale}/works/${path}`, 
+      canonical:`${baseUrl}/works/${path}`, 
     }
   };
 }

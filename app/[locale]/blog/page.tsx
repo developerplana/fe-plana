@@ -21,7 +21,7 @@ type Props = {
 }
 
 export async function generateMetadata(
-  { params }: Props,
+  {  }: Props,
 ): Promise<Metadata> {
 
   const data = await getPageData();
@@ -36,7 +36,7 @@ export async function generateMetadata(
     description: safeData.meta_description,
     keywords: keywordsArray,
     alternates: {
-      canonical:`${baseUrl}/${(await params).locale}/blog`, 
+      canonical:`${baseUrl}/blog`, 
     }
   };
 }

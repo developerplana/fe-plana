@@ -17,10 +17,7 @@ async function getPageData() {
   }
 
 
-  export async function generateMetadata(
-    props: { params: Promise<{ locale: string, slug: string }> }
-  ): Promise<Metadata> {
-    const { locale } = await props.params;
+  export async function generateMetadata(): Promise<Metadata> {
 
     
   const data = await getPageData();
@@ -35,7 +32,7 @@ async function getPageData() {
     description: safeData.meta_description,
     keywords: keywordsArray,
     alternates: {
-      canonical:`${baseUrl}/${locale}/works`, 
+      canonical:`${baseUrl}/works`, 
     }
   };
 }

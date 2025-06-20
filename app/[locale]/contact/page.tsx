@@ -1,6 +1,7 @@
 import { NextIntlClientProvider, useLocale, useMessages } from "next-intl";
 import Content from "./content";
 import type { Metadata } from "next";
+import Head from 'next/head';
 
 async function getPageData() {
   
@@ -16,10 +17,8 @@ async function getPageData() {
   }
 
   
-  export async function generateMetadata(
-    props: { params: Promise<{ locale: string }> }
-  ): Promise<Metadata> {
-    const { locale } = await props.params;
+  export async function generateMetadata(): Promise<Metadata> {
+
   
     const data = await getPageData();
     const safeData = data ?? [];  
@@ -33,7 +32,7 @@ async function getPageData() {
       description: safeData.meta_description,
       keywords: keywordsArray,
       alternates: {
-        canonical:`${baseUrl}/${locale}/contact`, 
+        canonical:`${baseUrl}/contact`, 
       }
     };
   }
@@ -43,9 +42,25 @@ export default function Contact() {
     const messages = useMessages()
   
     return (
+      <>
+      <Head>
+        <title>Contact Us – Plana Production House</title>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ContactPage",
+              "name": "Contact Plana Production House",
+              "description": "Get in touch with Plana Production House via phone, email, or our studio in Jakarta.",
+              "url": "https://plana.vision/contact"
+            }),
+          }}
+        />
+      </Head>
       <NextIntlClientProvider locale={locale} messages={messages}>
         <Content ></Content>
-      </NextIntlClientProvider>
+      </NextIntlClientProvider></>
   
     );
   }
