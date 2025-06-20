@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from '../navbar.module.css'; // Custom styles
-import Switcher from './Switcher';
+
 import { useParams } from 'next/navigation';
 import { useEffect } from 'react';
 
@@ -79,9 +79,6 @@ const Navbar = () => {
             </ul>
           </div>
         </div>
-
-        {/* Language Switcher */}
-        <Switcher />
       </div>
     </nav>
   );

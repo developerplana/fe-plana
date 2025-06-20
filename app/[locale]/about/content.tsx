@@ -21,9 +21,9 @@ export default function About() {
                 <div className='container-xl'>
                     <div className='row'>
                         <div className='col-12 col-lg-2'>
-                            <h2 className='text-uppercase display-6 fw-bold'>
+                            <h1 className='text-uppercase display-6 fw-bold'>
                                 About Plana
-                            </h2>
+                            </h1>
                         </div>
                         <div className='col-12 col-lg-10'>
                             <div className='row mb-4'>
