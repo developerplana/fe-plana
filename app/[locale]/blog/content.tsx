@@ -36,7 +36,7 @@ export default function Blog() {
                 <div className="container-xl">
                     <div className="row">
                         <div className="col-12">
-                            <h2 className='text-uppercase display-6 fw-bold'>Insights, inspirations, industry trends—<br></br>and everything in between.</h2>
+                            <h1 className='text-uppercase display-6 fw-bold'>Insights, inspirations, industry trends—<br></br>and everything in between.</h1>
                         </div>
                     </div>
                 </div>
