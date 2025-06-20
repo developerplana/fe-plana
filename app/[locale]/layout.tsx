@@ -142,6 +142,82 @@ export default  function RootLayout({ children }: RootLayoutProps) {
             },
           })}
         </Script>
+        {/* JSON-LD: ProfessionalService */}
+        <Script id="ld-json-professional-service" type="application/ld+json" strategy="afterInteractive">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            "name": "Plana Production House",
+            "url": "https://plana.vision/",
+            "logo": "https://plana.vision/images/PlanaRED.webp", // Use static image if possible
+            "image": "https://plana.vision/images/PlanaRED.webp",
+            "description": "Plana is a creative production house based in Jakarta, specialising in commercial photo and video content for brand campaigns, fashion shoots, and digital advertising.",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Jl. Lebak bulus III No. 88 - Unit C Cilandak Barat - Jakarta Selatan",
+              "addressLocality": "Jakarta Selatan",
+              "addressRegion": "DKI Jakarta",
+              "postalCode": "12440",
+              "addressCountry": "ID"
+            },
+            "email": "ambi@plana.vision",
+            "telephone": "+6221-39719799",
+            "openingHours": "Mo-Fr 10:00-18:00",
+            "sameAs": [
+              "https://www.instagram.com/plana.vision/",
+              "https://www.linkedin.com/company/planafilms/",
+              "https://www.youtube.com/@plana.vision"
+            ],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Creative Production Services",
+              "itemListElement": [
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial Video Production" }},
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Editorial Photoshoots" }},
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Brand Campaign Visual Content" }},
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fashion Campaign Shoots" }},
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Product Photography & Videography" }},
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Visual Branding & Storytelling" }},
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Creative Direction & Art Production" }}
+              ]
+            }
+          })}
+        </Script>
+
+        {/* JSON-LD: FAQPage */}
+        <Script id="ld-json-faq" type="application/ld+json" strategy="afterInteractive">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What kind of projects does Plana specialize in?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Plana focuses on commercial photo and video production for fashion brands, lifestyle campaigns, and digital ads."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Where is Plana based?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Plana is headquartered in Jakarta, Indonesia, and works with brands both locally and internationally."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I book Plana for an international shoot?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, Plana is experienced in handling overseas projects and remote collaboration with global clients."
+                }
+              }
+            ]
+          })}
+        </Script>
+
         <NextIntlClientProvider locale={locale} messages={messages}>
         <Canonical />
           <Navbar />
