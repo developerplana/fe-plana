@@ -45,16 +45,8 @@ async function getPageData() {
   console.log("ini res",res)
   return res.json();
 }
-
-
-type Props = {
-  params: Promise<{ locale: string }>
-}
-
  
-export async function generateMetadata(
-  { params }: Props,
-): Promise<Metadata> {
+export async function generateMetadata(): Promise<Metadata> {
 
   const data = await getPageData();
   const keywordsArray = typeof data.meta_keywords === 'string'
@@ -69,7 +61,7 @@ export async function generateMetadata(
       icon: '/images/favicon.ico',
     },
     alternates: {
-      canonical: `https://plana.vision/${(await params).locale}`, // adjust with full path if needed
+      canonical: `https://plana.vision`, // adjust with full path if needed
     }
   }
 }
@@ -102,7 +94,54 @@ export default  function RootLayout({ children }: RootLayoutProps) {
                 gtag('config', 'G-VN0N9N12ZG');
               `}
           </Script>
-       
+          
+            
+        {/* Schema: WebSite */}
+        <Script id="ld-json-website" type="application/ld+json" strategy="afterInteractive">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": "https://plana.vision/#website",
+            url: "https://plana.vision/",
+            name: "Plana Production House",
+            description: "Plana is a creative production house based in Jakarta, specialising in commercial photo and video content for brand campaigns, fashion shoots, and digital advertising.",
+            publisher: {
+              "@type": "Organization",
+              name: "Plana Production House",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://plana.vision/images/PlanaRED.webp",
+              },
+            },
+          })}
+        </Script>
+
+        {/* Schema: Organization */}
+        <Script id="ld-json-organization" type="application/ld+json" strategy="afterInteractive">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "@id": "https://plana.vision/#organization",
+            name: "Plana Production House",
+            url: "https://plana.vision/",
+            logo: {
+              "@type": "ImageObject",
+              url: "https://plana.vision/images/PlanaRED.webp",
+            },
+            sameAs: [
+              "https://www.instagram.com/plana.vision/",
+              "https://www.linkedin.com/company/planafilms/",
+              "https://www.youtube.com/@plana.vision",
+            ],
+            contactPoint: {
+              "@type": "ContactPoint",
+              telephone: "+6221-39719799",
+              contactType: "Customer Service",
+              areaServed: "ID",
+              availableLanguage: "Indonesian",
+            },
+          })}
+        </Script>
         <NextIntlClientProvider locale={locale} messages={messages}>
         <Canonical />
           <Navbar />

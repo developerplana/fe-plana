@@ -18,7 +18,7 @@ const res = await fetch(`${baseUrl}/api/blogs/detail/${params}`, {
 export async function generateMetadata(
   props: { params: Promise<{ locale: string, slug: string }> }
 ): Promise<Metadata> {
-  const { locale,slug } = await props.params;
+  const { slug } = await props.params;
 
   const data = await getPageData(slug);
   const safeData = data ?? {};
@@ -34,7 +34,7 @@ export async function generateMetadata(
     description: safeData.metaDescEN,
     keywords: keywordsArray,
     alternates: {
-      canonical: `${baseUrl}/${locale}/${slug}`,
+      canonical: `${baseUrl}/${slug}`,
     },
   };
 }
