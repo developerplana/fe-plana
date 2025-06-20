@@ -61,7 +61,7 @@ export default function Blog() {
 
                                     <div className='card-footer text-end'>
                                     <Link
-                                        href={`/blog/detail/${item.slug}`}
+                                        href={`/blog/${item.slug}`}
                                         className="btn btn-blog fw-bold rounded-pill px-4 justify-content-end"
                                         >
                                         READ ARTICLE

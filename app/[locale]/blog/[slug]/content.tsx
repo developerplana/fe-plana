@@ -1,12 +1,12 @@
 'use client';
 // import type { AppProps } from 'next/app';
 import Link from 'next/link';
-import '../../../generalplana.css'; // Import global styles
-import '../../../homepage.css';
+import '../../generalplana.css'; // Import global styles
+import '../../homepage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Image from 'next/image';
-import useBlogsSlug   from  '../../usecase/useBlogsSlug';
-import useBlogsAll   from  '../../usecase/useBlogsAll';
+import useBlogsSlug   from  '../usecase/useBlogsSlug';
+import useBlogsAll   from  '../usecase/useBlogsAll';
 import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 
@@ -98,7 +98,7 @@ export default function BlogDetail() {
                                     <p className="card-title text-uppercase fw-bold">{item.title}</p>
                                     </div>
                                     <div className="card-footer text-end">
-                                    <Link href={`/blog/detail/${item.slug}`} className="btn btn-blog fw-bold rounded-pill px-4 justify-content-end">
+                                    <Link href={`/blog/${item.slug}`} className="btn btn-blog fw-bold rounded-pill px-4 justify-content-end">
                                         READ ARTICLE
                                     </Link>
                                     </div>
