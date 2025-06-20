@@ -77,6 +77,21 @@ const nextConfig: NextConfig = {
       },
     ]
   },
+    async redirects() {
+      return [
+        {
+          source: '/id',
+          destination: '/',
+          permanent: true,
+        },
+        {
+          source: '/en',
+          destination: '/',
+          permanent: true,
+        },
+      ];
+    }
+  
   // Add other Next.js options here if needed
 };
 
