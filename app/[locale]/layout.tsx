@@ -57,6 +57,7 @@ export async function generateMetadata(): Promise<Metadata> {
     title: data.meta_title,
     description: data.meta_description,
     keywords: keywordsArray,
+    robots: 'index, follow',
     icons: {
       icon: '/images/favicon.ico',
     },
