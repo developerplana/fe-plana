@@ -34,7 +34,7 @@ export async function generateMetadata(
     description: safeData.metaDescEN,
     keywords: keywordsArray,
     alternates: {
-      canonical: `${baseUrl}/${slug}`,
+      canonical: `${baseUrl}/blog/${slug}`,
     },
   };
 }
