@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://plana.vision
+
+# Sitemaps
+Sitemap: https://plana.vision/sitemap.xml
