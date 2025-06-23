@@ -21,7 +21,22 @@ const settings = {
     slidesToScroll: 1
   };
   
-
+  function convertToEmbedUrl(url: string): string {
+    try {
+      const urlObj = new URL(url);
+      if (urlObj.hostname === 'www.youtube.com' && urlObj.pathname === '/watch') {
+        const videoId = urlObj.searchParams.get('v');
+        return `https://www.youtube.com/embed/${videoId}`;
+      } else if (urlObj.hostname === 'youtu.be') {
+        const videoId = urlObj.pathname.slice(1);
+        return `https://www.youtube.com/embed/${videoId}`;
+      }
+      return url; // return as is if already in embed format or unsupported
+    } catch {
+      return url;
+    }
+  }
+  
 export default function Page() {
     const params = useParams();
     const rawPath = params?.path;
@@ -85,20 +100,19 @@ export default function Page() {
                                 </li>
                             </ul>
                             {dataWorks?.urlYoutube ? (
-                                <div className="video-container mb-4">
-                                    <iframe
-                                    className="responsive-iframe"
-                                    src={dataWorks.urlYoutube}
-                                    title="YouTube video player"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    allowFullScreen
-                                    frameBorder="0"
-                                    ></iframe>
-                                </div>
-                                ) : (
-                                <p>No video available.</p>
+                            <div className="video-container mb-4">
+                                <iframe
+                                className="responsive-iframe"
+                                src={convertToEmbedUrl(dataWorks.urlYoutube)}
+                                title="YouTube video player"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen
+                                frameBorder="0"
+                                ></iframe>
+                            </div>
+                            ) : (
+                            <p>No video available.</p>
                             )}
-                           
                             <div className='row'>
                                 <div className='col-12 col-lg-4'>
                                     <p className='mb-0'>Director</p>
