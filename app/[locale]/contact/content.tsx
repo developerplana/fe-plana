@@ -40,7 +40,7 @@ export default function Contact() {
         body: JSON.stringify(form),
       });
 
-      const saveResult = await saveRes.json();
+    //   const saveResult = await saveRes.json();
       if (!saveRes.ok) throw new Error("Failed to save contact");
 
       // 2. Send Email via internal API
@@ -56,10 +56,14 @@ export default function Contact() {
       setStatus("Contact saved and email sent successfully!");
       setForm({ name: "", email: "", whatsapp: "", subject: "", message: "" });
 
-    } catch (error: any) {
-      console.error(error);
-      setStatus("Something went wrong.");
-    }
+    } catch (error) {
+        if (error instanceof Error) {
+          console.error(error.message);
+        } else {
+          console.error("Unexpected error", error);
+        }
+        setStatus("Something went wrong.");
+      }
 
     setLoading(false);
   };
