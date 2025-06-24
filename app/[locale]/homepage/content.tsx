@@ -5,12 +5,7 @@ import { useEffect, useState } from 'react';
 import '../../[locale]/generalplana.css'; // Import global styles
 import '../../[locale]/homepage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import useWorksAll  from  '../works/usecase/useWorksAll';
-// import Slider from "react-slick";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
-
-
+import { useWorks } from '../hooks/useWorks';
 
 export default function HomePage() {
   useEffect(() => {
@@ -30,13 +25,17 @@ export default function HomePage() {
 
   //get API works
   const [dataWorks, setDataWorks] = useState<WorkItem[]>([]);// 'any' to handle dynamic response structure
-  const { worksDataAll } = useWorksAll(); 
+  const { works, error, isLoading  } = useWorks(); 
 
   useEffect(() => {
-    setDataWorks(worksDataAll);
-  }, [worksDataAll]);
+    setDataWorks(works);
+  }, [works]);
 
   // if (loadingWorks) return <p>Loading...</p>;
+
+  console.log("ini response works",dataWorks)
+  if (isLoading) return <p>Loading works...</p>;
+  if (error) return <p>Error loading works.</p>;
 
     return (
       <><main>

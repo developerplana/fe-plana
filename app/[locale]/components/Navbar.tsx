@@ -60,7 +60,7 @@ const Navbar = () => {
           <div className="offcanvas-header">
             <button type="button" className="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
-          <div className="offcanvas-body">
+          <div className="offcanvas-body justify-content-end">
             <ul className="navbar-nav mx-3">
               <li className="nav-item">
                 <Link href={`/${locale}/works/`} className={`nav-link fw-bold text-light ${styles.unactive}`}>
