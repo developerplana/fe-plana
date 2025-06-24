@@ -32,7 +32,8 @@ export default function Works() {
         <div className="container-xl">
           <div className="row">
             <div className="col-12">
-              <h2 className='text-uppercase display-6 fw-bold'>Every project is crafted to captivate and inspire.</h2>
+              <h1 className='text-uppercase display-6 fw-bold'>A SHOWCASE OF OUR COMMERCIAL & EDITORIAL PRODUCTIONS.</h1>
+              {/* <h2 className='h4 fw-bold'>Every project is crafted to captivate and inspire.</h2> */}
             </div>
           </div>
         </div>

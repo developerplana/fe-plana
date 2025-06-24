@@ -7,19 +7,19 @@ import React from "react";
 import Image from 'next/image';
 import useWorksPath from  '../usecase/useWorksId';
 import useWorksAll from '../usecase/useWorksAll';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useParams } from 'next/navigation';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1
-  };
+// const settings = {
+//     dots: true,
+//     infinite: true,
+//     speed: 500,
+//     slidesToShow: 3,
+//     slidesToScroll: 1
+//   };
   
   function convertToEmbedUrl(url: string): string {
     try {
@@ -78,6 +78,17 @@ export default function Page() {
       console.error('Invalid format for behindTheScreen:', e);
     }
     
+     const [nav1, setNav1] = useState<Slider | null>(null);
+    const [nav2, setNav2] = useState<Slider | null>(null);
+    const slider1 = useRef<Slider>(null);
+    const slider2 = useRef<Slider>(null);
+
+    useEffect(() => {
+        if (slider1.current && slider2.current) {
+        setNav1(slider1.current);
+        setNav2(slider2.current);
+        }
+    }, []);
     
     return (    
         <>
@@ -129,7 +140,7 @@ export default function Page() {
                             </div>
                             <div className='row'>
                                 <div className='col-12'>
-                                <Slider {...settings}>
+                                {/* <Slider {...settings}>
                                 {behindTheScreenImages.map((img, index) => (
                                     <div key={index} className="p-2">
                                         <Image
@@ -141,7 +152,50 @@ export default function Page() {
                                         />
                                     </div>
                                     ))}
-                                </Slider>
+                                </Slider> */}
+
+                                 <Slider
+                    asNavFor={nav2 as Slider}
+                    ref={slider1}
+                    arrows={false}
+                    fade={true}
+                    className="mb-4"
+                  >
+                    {behindTheScreenImages.map((img, index) => (
+                      <div key={index} className="p-2">
+                        <Image
+                          src={img}
+                          alt={`Behind the scenes ${index + 1}`}
+                          width={800}
+                          height={600}
+                          className="img-fluid"
+                        />
+                      </div>
+                    ))}
+                  </Slider>
+
+                  {/* Thumbnail Navigation Slider */}
+                  <Slider
+                    asNavFor={nav1 as Slider}
+                    ref={slider2}
+                    slidesToShow={4}
+                    swipeToSlide={true}
+                    focusOnSelect={true}
+                    centerMode={true}
+                    centerPadding="0px"
+                  >
+                    {behindTheScreenImages.map((img, index) => (
+                      <div key={index} className="p-2">
+                        <Image
+                          src={img}
+                          alt={`Thumbnail ${index + 1}`}
+                          width={160}
+                          height={120}
+                          className="img-fluid"
+                        />
+                      </div>
+                    ))}
+                  </Slider>
                                 </div>
                             </div>
                             <p>
