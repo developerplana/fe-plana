@@ -141,7 +141,7 @@ export default function Contact() {
         </div>
 
         <div className='section px-4 px-xl-0 py-0'>
-          <iframe className='iframemap'  src="https://www.google.com/maps?q=PT%20Gajah%20Gendut%20Makmur,%20Jl.%20Lebak%20Bulus%20III%20No.%2088%20Unit%20C,%20Cilandak%20Barat,%20Jakarta%20Selatan&output=embed" height="750" loading="lazy"></iframe>
+          <iframe className='iframemap' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5256.629428501557!2d106.78687397610393!3d-6.301945393687225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ef64262426d7%3A0x3ab3b1607f95397a!2sPLANA!5e1!3m2!1sid!2sid!4v1750772308608!5m2!1sid!2sid" height='750' loading="lazy"></iframe>
         </div>
 
         <div className="section py-5">
