@@ -11,7 +11,7 @@ export default function Contact() {
   const [form, setForm] = useState({
     name: "",
     email: "",
-    whatsapp: "",
+    phone_number: "",
     subject: "",
     message: "",
   });
@@ -54,7 +54,7 @@ export default function Contact() {
       if (!emailResult.success) throw new Error("Failed to send email");
 
       setStatus("Contact saved and email sent successfully!");
-      setForm({ name: "", email: "", whatsapp: "", subject: "", message: "" });
+      setForm({ name: "", email: "", phone_number: "", subject: "", message: "" });
 
     } catch (error) {
         if (error instanceof Error) {
@@ -120,7 +120,7 @@ export default function Contact() {
                   </div>
                   <div className="mb-4">
                     <label className="form-label h5 fw-bold text-uppercase">Your Whatsapp</label>
-                    <input type="text" name="whatsapp" className="form-control" value={form.whatsapp} onChange={handleChange} />
+                    <input type="text" name="phone_number" className="form-control" value={form.phone_number} onChange={handleChange} />
                   </div>
                   <div className="mb-4">
                     <label className="form-label h5 fw-bold text-uppercase">Subject</label>
@@ -141,7 +141,7 @@ export default function Contact() {
         </div>
 
         <div className='section px-4 px-xl-0 py-0'>
-          <iframe className='iframemap' src="https://www.google.com/maps/embed?pb=!1m18!..." height="750" loading="lazy"></iframe>
+          <iframe className='iframemap'  src="https://www.google.com/maps?q=PT%20Gajah%20Gendut%20Makmur,%20Jl.%20Lebak%20Bulus%20III%20No.%2088%20Unit%20C,%20Cilandak%20Barat,%20Jakarta%20Selatan&output=embed" height="750" loading="lazy"></iframe>
         </div>
 
         <div className="section py-5">

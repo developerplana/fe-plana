@@ -6,8 +6,7 @@ import '../generalplana.css'; // Import global styles
 import '../homepage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Image from 'next/image';
-import useWorksAll   from  '../works/usecase/useWorksAll';
-
+import { useWorks } from '../hooks/useWorks';
 
 export default function Works() {
 
@@ -21,11 +20,16 @@ export default function Works() {
 
 
   const [dataWorks, setDataWorks] = useState<WorkItem[]>([]);// 'any' to handle dynamic response structure
-  const { worksDataAll } = useWorksAll(); 
+  const { works, error, isLoading  } = useWorks(); 
 
   useEffect(() => {
-    setDataWorks(worksDataAll);
-  }, [worksDataAll]);
+    setDataWorks(works);
+   
+  }, [works]);
+
+  console.log("ini response works",dataWorks)
+  if (isLoading) return <p>Loading works...</p>;
+  if (error) return <p>Error loading works.</p>;
 
     return (    
         <><div className="section headpage px-4 px-xl-0">

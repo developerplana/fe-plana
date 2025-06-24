@@ -27,7 +27,7 @@ export async function generateMetadata(
   ? safeData.metaKeywordEN.split(',').map((kw: string) => kw.trim())
   : safeData.metaKeywordEN || [];
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://plana.vision';
-
+  console.log("ini meta",safeData);
   return {
     title: safeData.metaTitleEN,
     description: safeData.metaDescEN,

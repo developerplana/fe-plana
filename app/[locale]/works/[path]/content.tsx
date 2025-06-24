@@ -6,12 +6,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React from "react";
 import Image from 'next/image';
 import useWorksPath from  '../usecase/useWorksId';
-import useWorksAll from '../usecase/useWorksAll';
 import { useEffect, useState, useRef } from 'react';
 import { useParams } from 'next/navigation';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useWorks } from '../../hooks/useWorks';
+import Link from 'next/link';
 
 // const settings = {
 //     dots: true,
@@ -55,13 +56,19 @@ export default function Page() {
     };
     const [dataWorks, setDataWorks] = useState<WorkItem | null>(null);
     const { worksData } = useWorksPath(rawPath as string);
-    const { worksDataAll } = useWorksAll();
 
+    const [dataWorksAll, setDataWorksAll] = useState<WorkItem[]>([]);// 'any' to handle dynamic response structure
+    const { works, error, isLoading  } = useWorks(); 
+  
+
+    console.log("ini all data",dataWorksAll)
+    
     useEffect(() => {
         if(worksData){
             setDataWorks(worksData)
+            setDataWorksAll(works)
         }
-    }, [worksData]);
+    }, [worksData,works]);
     let behindTheScreenImages: string[] = [];
 
     try {
@@ -101,155 +108,175 @@ export default function Page() {
                     </div>
                 </div>
             </div>
-            <div className='section px-4 px-xl-0'>
+            {isLoading ? (
+              <p>Loading works...</p>
+            ) : error ? (
+              <p>Error loading works.</p>
+            ) : (
+            <><div className='section px-4 px-xl-0'>
                 <div className='container-xl'>
-                    <div className='row justify-content-center'>
+                  <div className='row justify-content-center'>
+                    <div className='col-12'>
+                      <ul className='plana-work'>
+                        <li className="text-uppercase fw-bold">
+                          <h2>{dataWorks?.titleID}</h2>
+                        </li>
+                      </ul>
+                      {dataWorks?.urlYoutube ? (
+                        <div className="video-container mb-4">
+                          <iframe
+                            className="responsive-iframe"
+                            src={convertToEmbedUrl(dataWorks.urlYoutube)}
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowFullScreen
+                            frameBorder="0"
+                          ></iframe>
+                        </div>
+                      ) : (
+                        <p>No video available.</p>
+                      )}
+                      <div className='row'>
+                        <div className='col-12 col-lg-4'>
+                          <p className='mb-0'>Director</p>
+                          <p className='fw-bold text-uppercase'>{dataWorks?.director}</p>
+                        </div>
+                        <div className='col-12 col-lg-3'>
+                          <p className='mb-0'>Production Year</p>
+                          <p className='fw-bold text-uppercase'>{dataWorks?.yearProduction}</p>
+                        </div>
+                        {/* <div className='col-12 col-lg-5'>
+        <p className='mb-0'>Client</p>
+        <p className='fw-bold text-uppercase'>{dataWorks?.client}</p>
+    </div> */}
+                      </div>
+                      <div className='row'>
                         <div className='col-12'>
-                            <ul className='plana-work'>
-                                <li className="text-uppercase fw-bold">
-                                    <h2>{dataWorks?.titleID}</h2>
-                                </li>
-                            </ul>
-                            {dataWorks?.urlYoutube ? (
-                            <div className="video-container mb-4">
-                                <iframe
-                                className="responsive-iframe"
-                                src={convertToEmbedUrl(dataWorks.urlYoutube)}
-                                title="YouTube video player"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowFullScreen
-                                frameBorder="0"
-                                ></iframe>
-                            </div>
-                            ) : (
-                            <p>No video available.</p>
-                            )}
-                            <div className='row'>
-                                <div className='col-12 col-lg-4'>
-                                    <p className='mb-0'>Director</p>
-                                    <p className='fw-bold text-uppercase'>{dataWorks?.director}</p>
-                                </div>
-                                <div className='col-12 col-lg-3'>
-                                    <p className='mb-0'>Production Year</p>
-                                    <p className='fw-bold text-uppercase'>{dataWorks?.yearProduction}</p>
-                                </div>
-                                {/* <div className='col-12 col-lg-5'>
-                                    <p className='mb-0'>Client</p>
-                                    <p className='fw-bold text-uppercase'>{dataWorks?.client}</p>
-                                </div> */}
-                            </div>
-                            <div className='row'>
-                                <div className='col-12'>
-                                {/* <Slider {...settings}>
-                                {behindTheScreenImages.map((img, index) => (
-                                    <div key={index} className="p-2">
-                                        <Image
-                                        src={img}
-                                        alt={`Behind the scenes ${index + 1}`}
-                                        width={800}
-                                        height={600}
-                                        className="img-fluid"
-                                        />
-                                    </div>
-                                    ))}
-                                </Slider> */}
+                          {/* <Slider {...settings}>
+    {behindTheScreenImages.map((img, index) => (
+        <div key={index} className="p-2">
+            <Image
+            src={img}
+            alt={`Behind the scenes ${index + 1}`}
+            width={800}
+            height={600}
+            className="img-fluid"
+            />
+        </div>
+        ))}
+    </Slider> */}
 
-                                 <Slider
-                    asNavFor={nav2 as Slider}
-                    ref={slider1}
-                    arrows={false}
-                    fade={true}
-                    className="mb-4"
-                  >
-                    {behindTheScreenImages.map((img, index) => (
-                      <div key={index} className="p-2">
-                        <Image
-                          src={img}
-                          alt={`Behind the scenes ${index + 1}`}
-                          width={800}
-                          height={600}
-                          className="img-fluid"
-                        />
-                      </div>
-                    ))}
-                  </Slider>
+                          <Slider
+                            asNavFor={nav2 as Slider}
+                            ref={slider1}
+                            arrows={false}
+                            fade={true}
+                            className="mb-4"
+                          >
+                            {behindTheScreenImages.map((img, index) => (
+                              <div key={index} className="p-2">
+                                <Image
+                                  src={img}
+                                  alt={`Behind the scenes ${index + 1}`}
+                                  width={800}
+                                  height={600}
+                                  className="img-fluid" />
+                              </div>
+                            ))}
+                          </Slider>
 
-                  {/* Thumbnail Navigation Slider */}
-                  <Slider
-                    asNavFor={nav1 as Slider}
-                    ref={slider2}
-                    slidesToShow={4}
-                    swipeToSlide={true}
-                    focusOnSelect={true}
-                    centerMode={true}
-                    centerPadding="0px"
-                  >
-                    {behindTheScreenImages.map((img, index) => (
-                      <div key={index} className="p-2">
-                        <Image
-                          src={img}
-                          alt={`Thumbnail ${index + 1}`}
-                          width={160}
-                          height={120}
-                          className="img-fluid"
-                        />
-                      </div>
-                    ))}
-                  </Slider>
-                                </div>
-                            </div>
-                            <p>
-                                {dataWorks?.descID}
-                            </p>
+                          {/* Thumbnail Navigation Slider */}
+                          <Slider
+                            asNavFor={nav1 as Slider}
+                            ref={slider2}
+                            slidesToShow={4}
+                            swipeToSlide={true}
+                            focusOnSelect={true}
+                            centerMode={true}
+                            centerPadding="0px"
+                          >
+                            {behindTheScreenImages.map((img, index) => (
+                              <div key={index} className="p-2">
+                                <Image
+                                  src={img}
+                                  alt={`Thumbnail ${index + 1}`}
+                                  width={160}
+                                  height={120}
+                                  className="img-fluid" />
+                              </div>
+                            ))}
+                          </Slider>
                         </div>
+                      </div>
+                      <p>
+                        {dataWorks?.descID}
+                      </p>
                     </div>
+                  </div>
                 </div>
-            </div>
-            <div className='section pt-1 px-4 px-xl-0'>
-                <div className='container-xl'>
+              </div><div className='section pt-1 px-4 px-xl-0'>
+                  <div className='container-xl'>
                     <div className="row d-flex">
-                   
-                    <div className="col-12 col-lg-4">
+
+                      <div className="col-12 col-lg-4">
                         <h3 className="display-6 fw-bold mb-4">OTHER WORKS</h3>
-                    </div>
-                    <div className="col-12">
-                    <div className="row row-cols-1 row-cols-lg-3">
-                    {Array.isArray(worksDataAll) &&
-                        worksDataAll.map((item: WorkItem, index) => (
-                        <div className="col mb-4" key={index}>
-                            <div className="card card-project h-100 bg-transparent border-0">
-                                <Image 
-                                 src={
-                                    process.env.NEXT_PUBLIC_LARAVEL_BASE_URL?.includes("http://127.0.0.1:8000")
-                                      ? `${item.image?.replace(/^\//, "")}`
-                                      : `${item.image}`
-                                  }
-                                width={16} 
-                                height={9}
-                                layout="responsive" 
-                                className="card-img-top mb-1 rounded-2" 
-                                alt=""></Image>
-                                <div className="card-body p-0">
-                                <div className="row g-0">
-                                    <div className="col-1 pt-1">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="27" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-clapperboard-icon lucide-clapperboard pb-1 project-icon"><path d="M20.2 6 3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3Z"/><path d="m6.2 5.3 3.1 3.9"/><path d="m12.4 3.4 3.1 4"/><path d="M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg></div>
-                                    <div className="col-11">
-                                    <p className="card-title text-uppercase fw-bold">{item.titleID} </p>
+                      </div>
+                      <div className="col-12">
+                        <div className="row row-cols-1 row-cols-lg-3">
+                          {Array.isArray(dataWorksAll) &&
+                            dataWorksAll.map((item: WorkItem, index) => (
+                              <div className="col mb-4" key={index}>
+                                <Link href={`/works/${item.slug}`} className="text-decoration-none text-reset">
+                                  <div className="card card-project h-100 bg-transparent border-0">
+                                    <Image
+                                      src={process.env.NEXT_PUBLIC_LARAVEL_BASE_URL?.includes("http://127.0.0.1:8000")
+                                        ? `${item.image?.replace(/^\//, "")}`
+                                        : `${item.image}`}
+                                      width={16}
+                                      height={9}
+                                      layout="responsive"
+                                      className="card-img-top mb-1 rounded-2"
+                                      alt="" />
+                                    <div className="card-body p-0">
+                                      <div className="row g-0">
+                                        <div className="col-1 pt-1">
+                                          <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="27"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            strokeWidth="2"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            className="lucide lucide-clapperboard-icon lucide-clapperboard pb-1 project-icon"
+                                          >
+                                            <path d="M20.2 6 3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3Z" />
+                                            <path d="m6.2 5.3 3.1 3.9" />
+                                            <path d="m12.4 3.4 3.1 4" />
+                                            <path d="M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z" />
+                                          </svg>
+                                        </div>
+                                        <div className="col-11">
+                                          <p className="card-title text-uppercase fw-bold">{item.titleID}</p>
+                                        </div>
+                                      </div>
                                     </div>
-                                </div>
-                                </div>
-                            </div>
+                                  </div>
+                                </Link>
+                              </div>
+                            ))}
+
                         </div>
-                       ))}
+                      </div>
                     </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-            <div className="section py-5">
-              <div className="py-5">
-              </div>
-            </div>
+                  </div>
+
+                </div><div className="section py-5">
+                  <div className="py-5">
+                  </div>
+                </div></>
+              )}
         </>
         
     );
