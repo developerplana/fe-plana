@@ -38,17 +38,8 @@ export default function Contact() {
       });
 
     //   const saveResult = await saveRes.json();
+    console.log("ini save",saveRes)
       if (!saveRes.ok) throw new Error("Failed to save contact");
-
-      // // 2. Send Email via internal API
-      // const emailRes = await fetch("/api/send-email", {
-      //   method: "POST",
-      //   headers: { "Content-Type": "application/json" },
-      //   body: JSON.stringify(form),
-      // });
-
-      // const emailResult = await emailRes.json();
-      // if (!emailResult.success) throw new Error("Failed to send email");
 
       setStatus("Contact saved and email sent successfully!");
       setForm({ name: "", email: "", phone_number: "", subject: "", message: "" });

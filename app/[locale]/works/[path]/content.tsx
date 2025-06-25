@@ -1,8 +1,4 @@
 'use client';
-
-import '../../generalplana.css'; // Import global styles
-import '../../homepage.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import React from "react";
 import Image from 'next/image';
 import useWorksPath from  '../usecase/useWorksId';
@@ -86,14 +82,13 @@ export default function Page() {
     const [nav2, setNav2] = useState<Slider | null>(null);
     const slider1 = useRef<Slider>(null);
     const slider2 = useRef<Slider>(null);
-
     useEffect(() => {
         if (slider1.current && slider2.current) {
         setNav1(slider1.current);
         setNav2(slider2.current);
         }
     }, []);
-    
+  
     return (    
         <>
             <div className="section headpage px-4 px-xl-0">
@@ -131,26 +126,15 @@ export default function Page() {
                           ></iframe>
                         </div>
                       ) : (
-                        <p>No video available.</p>
-                      )}
-                      <div className='row'>
-                        <div className='col-12 col-lg-4'>
-                          <p className='mb-0'>Director</p>
-                          <p className='fw-bold text-uppercase'>{dataWorks?.director}</p>
-                        </div>
-                        <div className='col-12 col-lg-3'>
-                          <p className='mb-0'>Production Year</p>
-                          <p className='fw-bold text-uppercase'>{dataWorks?.yearProduction}</p>
-                        </div>
-                      </div>
-                      <div className='row'>
+                        <div className='row'>
                         <div className='col-12'>
                           <Slider
-                            asNavFor={nav2 as Slider}
+                            asNavFor={nav1 as Slider}
                             ref={slider1}
                             arrows={false}
                             fade={true}
                             className="mb-4"
+                            infinite={true}
                           >
                             {behindTheScreenImages.map((img, index) => (
                               <div key={index} className="p-2">
@@ -159,35 +143,41 @@ export default function Page() {
                                   alt={`Behind the scenes ${index + 1}`}
                                   width={800}
                                   height={600}
-                                  className="img-fluid" 
-                                  priority={false}
-                                  />
+                                  className="img-fluid"
+                                />
                               </div>
                             ))}
                           </Slider>
-
-                          {/* Thumbnail Navigation Slider */}
+                  
                           <Slider
-                            asNavFor={nav1 as Slider}
+                            asNavFor={nav2 as Slider}
                             ref={slider2}
-                            slidesToShow={4}
+                            slidesToShow={3}
                             swipeToSlide={true}
                             focusOnSelect={true}
                             centerMode={true}
                             centerPadding="0px"
+                            infinite={true}
                           >
                             {behindTheScreenImages.map((img, index) => (
                               <div key={index} className="p-2">
                                 <Image
                                   src={img}
                                   alt={`Thumbnail ${index + 1}`}
-                                  width={160}
-                                  height={120}
+                                  width={800}
+                                  height={600}
                                   className="img-fluid"
-                                  priority={false} />
+                                />
                               </div>
                             ))}
                           </Slider>
+                        </div>
+                      </div>
+                      )}
+                      <div className='row'>
+                        <div className='col-12 col-lg-4'>
+                          <p className='mb-0'>Director</p>
+                          <p className='fw-bold text-uppercase'>{dataWorks?.director}</p>
                         </div>
                       </div>
                       <p>
