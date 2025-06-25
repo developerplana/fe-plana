@@ -2,9 +2,6 @@
 import Link from "next/link";
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import '../../[locale]/generalplana.css'; // Import global styles
-import '../../[locale]/homepage.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { useWorks } from '../hooks/useWorks';
 
 export default function HomePage() {
@@ -32,8 +29,6 @@ export default function HomePage() {
   }, [works]);
 
   // if (loadingWorks) return <p>Loading...</p>;
-
-  console.log("ini response works",dataWorks)
   if (isLoading) return <p>Loading works...</p>;
   if (error) return <p>Error loading works.</p>;
 
@@ -108,6 +103,7 @@ export default function HomePage() {
                               layout="responsive"
                               className="card-img-top mb-1 rounded-2"
                               alt={item.imageDesc}
+                              priority={false}
                             />
                             <div className="card-body p-0">
                               <div className="row g-0">

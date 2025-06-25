@@ -60,9 +60,6 @@ export default function Page() {
     const [dataWorksAll, setDataWorksAll] = useState<WorkItem[]>([]);// 'any' to handle dynamic response structure
     const { works, error, isLoading  } = useWorks(); 
   
-
-    console.log("ini all data",dataWorksAll)
-    
     useEffect(() => {
         if(worksData){
             setDataWorks(worksData)
@@ -145,27 +142,9 @@ export default function Page() {
                           <p className='mb-0'>Production Year</p>
                           <p className='fw-bold text-uppercase'>{dataWorks?.yearProduction}</p>
                         </div>
-                        {/* <div className='col-12 col-lg-5'>
-        <p className='mb-0'>Client</p>
-        <p className='fw-bold text-uppercase'>{dataWorks?.client}</p>
-    </div> */}
                       </div>
                       <div className='row'>
                         <div className='col-12'>
-                          {/* <Slider {...settings}>
-    {behindTheScreenImages.map((img, index) => (
-        <div key={index} className="p-2">
-            <Image
-            src={img}
-            alt={`Behind the scenes ${index + 1}`}
-            width={800}
-            height={600}
-            className="img-fluid"
-            />
-        </div>
-        ))}
-    </Slider> */}
-
                           <Slider
                             asNavFor={nav2 as Slider}
                             ref={slider1}
@@ -180,7 +159,9 @@ export default function Page() {
                                   alt={`Behind the scenes ${index + 1}`}
                                   width={800}
                                   height={600}
-                                  className="img-fluid" />
+                                  className="img-fluid" 
+                                  priority={false}
+                                  />
                               </div>
                             ))}
                           </Slider>
@@ -202,7 +183,8 @@ export default function Page() {
                                   alt={`Thumbnail ${index + 1}`}
                                   width={160}
                                   height={120}
-                                  className="img-fluid" />
+                                  className="img-fluid"
+                                  priority={false} />
                               </div>
                             ))}
                           </Slider>

@@ -1,7 +1,4 @@
 'use client';
-import '../generalplana.css'; // Import global styles
-import '../homepage.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Image from 'next/image';
 
 
