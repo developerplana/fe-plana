@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import '../generalplana.css'; // Import global styles
 import '../homepage.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 import Image from 'next/image';
 import { useWorks } from '../hooks/useWorks';
 
@@ -27,7 +27,6 @@ export default function Works() {
    
   }, [works]);
 
-  console.log("ini response works",dataWorks)
   if (isLoading) return <p>Loading works...</p>;
   if (error) return <p>Error loading works.</p>;
 
@@ -54,7 +53,9 @@ export default function Works() {
                           width={16}
                           height={9} layout="responsive"
                           className="card-img-top mb-1 rounded-2"
-                          alt={item.imageDesc}>
+                          alt={item.imageDesc}
+                          priority={false}
+                          >
                         </Image>
 
                         <div className="card-body p-0">

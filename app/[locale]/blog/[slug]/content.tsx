@@ -1,9 +1,6 @@
 'use client';
 // import type { AppProps } from 'next/app';
 import Link from 'next/link';
-import '../../generalplana.css'; // Import global styles
-import '../../homepage.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Image from 'next/image';
 import useBlogsSlug   from  '../usecase/useBlogsSlug';
 import useBlogsAll   from  '../usecase/useBlogsAll';

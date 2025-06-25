@@ -1,8 +1,5 @@
 'use client';
 import Link from 'next/link';
-import '../generalplana.css';
-import '../homepage.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from '../components/Navbar';
 import Social from '../components/Social';
 import { useState } from 'react';
@@ -43,15 +40,15 @@ export default function Contact() {
     //   const saveResult = await saveRes.json();
       if (!saveRes.ok) throw new Error("Failed to save contact");
 
-      // 2. Send Email via internal API
-      const emailRes = await fetch("/api/send-email", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
+      // // 2. Send Email via internal API
+      // const emailRes = await fetch("/api/send-email", {
+      //   method: "POST",
+      //   headers: { "Content-Type": "application/json" },
+      //   body: JSON.stringify(form),
+      // });
 
-      const emailResult = await emailRes.json();
-      if (!emailResult.success) throw new Error("Failed to send email");
+      // const emailResult = await emailRes.json();
+      // if (!emailResult.success) throw new Error("Failed to send email");
 
       setStatus("Contact saved and email sent successfully!");
       setForm({ name: "", email: "", phone_number: "", subject: "", message: "" });

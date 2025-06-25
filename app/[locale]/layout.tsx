@@ -12,8 +12,10 @@ import Navbar from '../[locale]/components/Navbar';
 import Footer from '../[locale]/components/Footer';
 import Social from '../[locale]/components/Social';
 import Canonical from '../[locale]/components/Canonical';
+import '../[locale]/generalplana.css'; // Import global styles
+import '../[locale]/homepage.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Script from "next/script";
-
 import { Exo, Montserrat } from 'next/font/google'
 
 const exo = Exo({
