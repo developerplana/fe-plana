@@ -18,6 +18,7 @@ export default function HomePage() {
     id: string;
     titleID: string;
     image: string;
+    slug:string;
   };
 
   //get API works
@@ -90,7 +91,7 @@ export default function HomePage() {
                     {Array.isArray(dataWorks) &&
                     dataWorks.slice(0, 6).map((item: WorkItem, index) => (
                       <div className="col mb-4" key={index}>
-                        <Link href={`/works/${item.titleID}`} className="text-decoration-none text-reset">
+                        <Link href={`/works/${item.slug}`} className="text-decoration-none text-reset">
                           <div className="card card-project h-100 bg-transparent border-0">
                             <Image
                               src={
