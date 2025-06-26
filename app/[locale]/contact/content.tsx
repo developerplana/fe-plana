@@ -29,7 +29,7 @@ export default function Contact() {
       const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
       // 1. Save to Laravel API
-      const saveRes = await fetch(`${apiUrl}/api/contacts`, {
+      await fetch(`${apiUrl}/api/contacts`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -37,9 +37,9 @@ export default function Contact() {
         body: JSON.stringify(form),
       });
 
-    //   const saveResult = await saveRes.json();
-    console.log("ini save",saveRes)
-      if (!saveRes.ok) throw new Error("Failed to save contact");
+      // const saveResult = await saveRes.json();
+
+      // if (!saveRes.ok) throw new Error("Failed to save contact");
 
       setStatus("Contact saved and email sent successfully!");
       setForm({ name: "", email: "", phone_number: "", subject: "", message: "" });
