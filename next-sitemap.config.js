@@ -9,13 +9,32 @@ module.exports = {
   generateRobotsTxt: true,
   generateIndexSitemap: false,
   sitemapSize: 1000,
+
+  // Optional: Customize robots.txt
+  robotsTxtOptions: {
+    policies: [
+      {
+        userAgent: '*',
+        allow: '/',
+        disallow: ['/admin'], // ❌ Prevent crawling admin route
+      },
+    ],
+    additionalSitemaps: [
+      `${siteUrl}/sitemap.xml`,
+    ],
+  },
+
   additionalPaths: async () => {
     const lastmod = new Date().toISOString();
 
     let works = [];
     try {
       const res = await fetch(`${siteUrl}/api/works`);
-      works = await res.json();
+      if (res.ok) {
+        works = await res.json();
+      } else {
+        console.error('Failed to fetch works:', res.statusText);
+      }
     } catch (err) {
       console.error('Error fetching works:', err);
     }
@@ -23,7 +42,11 @@ module.exports = {
     let blogs = [];
     try {
       const res = await fetch(`${siteUrl}/api/blogs/detail`);
-      blogs = await res.json();
+      if (res.ok) {
+        blogs = await res.json();
+      } else {
+        console.error('Failed to fetch blogs:', res.statusText);
+      }
     } catch (err) {
       console.error('Error fetching blogs:', err);
     }
