@@ -119,7 +119,7 @@ export default function About() {
                                         <div className="card-body py-4">
                                         <h3 className="card-title h2 fw-bold">PHOTOGRAPHY</h3>
                                         <p className="card-text">
-                                        Our photography isn’t just about taking pretty pictures—it’s about capturing intent. From bold ad campaigns to elegant product shots, we create visual assets that speak directly to your brand identity.
+                                        Our photography isn't just about taking pretty pictures—it's about capturing intent. From bold ad campaigns to elegant product shots, we create visual assets that speak directly to your brand identity.
                                             Like everything we do as a production company, we tailor each project with the right creative team and the same care we bring to our films. Every frame is purpose-driven—and perfectly styled.
                                         </p>
                                         </div>
