@@ -18,7 +18,7 @@ export default function About() {
                 <div className='container-xl'>
                     <div className='row'>
                         <div className='col-12 col-lg-2'>
-                            <h1 className='text-uppercase display-6 fw-bold'>
+                            <h1 className='display-6 fw-bold'>
                                 About Plana
                             </h1>
                         </div>
@@ -26,14 +26,16 @@ export default function About() {
                             <div className='row mb-4'>
                                 <div className='col-12 col-lg-6'>
                                     <p>
-                                        PLANA was founded in 2021 as an award winning production company based in Jakarta, Indonesia. We make films for money. LOL, NO, we make films to make you comfortable. Like our name. PLANA is not only a word, it is a belief. Our belief that we exist to make you comfortable, whenever you have make films or commercials for your brand.
+                                        PLANA was founded in 2021 as a creative production company based in Jakarta, Indonesia. We make films for money. LOL, NO, we make films to make you comfortable. Like our name.
+                                        PLANA is more than just a name, it’s a belief. A belief that creativity should feel effortless, that the production process should make you feel at ease, whether you're a bold startup or a big brand needing fresh content
+
                                     </p>
                                 </div>
                                 <div className='col-12 col-lg-6'>
                                 <Image
                                     className='img-fluid'
                                     src='/images/plana-shoot-3.webp'
-                                    alt='description'
+                                    alt='Production company in Jakarta'
                                     width={800} // you can adjust this
                                     height={600} // adjust this too
                                     />
@@ -44,14 +46,16 @@ export default function About() {
                                      <Image
                                     className='img-fluid'
                                     src='/images/plana-shoot-2.webp'
-                                    alt='description'
+                                    alt='Production company in Jakarta'
                                     width={800} // you can adjust this
                                     height={600} // adjust this too
                                     />
                                 </div>
                                 <div className='col-12 col-lg-6'>
                                     <p>
-                                        At Plana, we bridge the gap between global creativity and local proficiency. Our mission is to elevate Indonesias creative industry by blending world-class expertise with local talents, delivering exceptional production value for clients both locally and globally. By assembling the right team for each project, we transform ideas into compelling visual experiences. Whether working with local brands or international giants, our goal is to deliver unparalleled quality, creativity, and professionalism in every frame.
+                                        At Plana, we bridge the gap between global creativity and local know-how. Our mission is to elevate Indonesia’s creative industry by combining world-class expertise with the best local talents.
+                                        As a Jakarta-based production company, we assemble the right team for every project—turning bold ideas into compelling visual experiences. Whether working with homegrown brands or international giants, we bring creativity, clarity, and comfort to every frame.
+
                                     </p>
                                 </div>
                             </div>
@@ -63,7 +67,7 @@ export default function About() {
                  <div className="container-xl">
                     <div className='row'>
                     <div className='col-12'>
-                            <h3 className='text-uppercase display-6 fw-bold mb-4'>
+                            <h3 className='display-6 fw-bold mb-4'>
                                 Our Service
                             </h3>
                         </div>
@@ -77,7 +81,9 @@ export default function About() {
                                     <div className="col-lg-9">
                                         <div className="card-body py-4">
                                             <h3 className="card-title h2 fw-bold">VIDEO PRODUCTION SERVICES</h3>
-                                            <p className="card-text">We offer comprehensive full production services that take your project from concept to completion. We meticulously assemble the perfect team for each project, ensuring that every detail aligns with your vision. From pre-production planning to on-set execution, and through to post-production supervision, we handle every aspect with precision and expertise. Our goal is to deliver a seamless experience that results in high-quality, impactful content.</p>
+                                                <p className="card-text">We offer full-scale production services that take your vision from concept to final cut. Every project begins with building the right crew, from director to lighting tech.
+                                                As a creative production company, we handle pre-production, on-set execution, and post-production supervision with care and precision. The result? Content that feels seamless, looks sharp, and hits the mark.
+                                                </p>
                                         </div>
                                     </div>
                                 </div>
@@ -93,7 +99,10 @@ export default function About() {
                                     <div className="col-md-9">
                                         <div className="card-body py-4">
                                         <h3 className="card-title h2 fw-bold">FULL ANIMATION</h3>
-                                        <p className="card-text">Our Full Animation service is designed to integrate and streamline various post-production elements into a cohesive and visually stunning final product. We collaborate with top-tier animators, CG artists, AI artists, and musicians, carefully selecting the right director to bring the creative vision to life. By managing the entire post-production pipeline, we ensure that all aspects of the project are harmoniously aligned, delivering a polished and immersive visual experience.</p>
+                                        <p className="card-text">
+                                        Animation is where imagination goes wild, and we love that. Our Full Animation service blends direction, CG artistry, AI tools, and sound design into one cohesive visual experience.
+                                            Whether it's a playful explainer or a cinematic brand opener, our production company partners with top animators and musicians to bring your story to life, pixel by pixel.
+                                        </p>
                                         </div>
                                     </div>
                                 </div>
@@ -109,7 +118,10 @@ export default function About() {
                                     <div className="col-md-9">
                                         <div className="card-body py-4">
                                         <h3 className="card-title h2 fw-bold">PHOTOGRAPHY</h3>
-                                        <p className="card-text">Our Photography service is built to support commercial goals with clarity and creative intent. We craft visual assets that speak to your brand’s identity, whether for advertising campaigns, product launches, or editorial features. From pre-shoot planning to final image delivery, we manage the entire process with the same precision and collaborative spirit that defines our motion work. By assembling the right creative team for each project, we ensure every frame aligns with your message and meets the demands of high-impact visual storytelling.</p>
+                                        <p className="card-text">
+                                        Our photography isn’t just about taking pretty pictures—it’s about capturing intent. From bold ad campaigns to elegant product shots, we create visual assets that speak directly to your brand identity.
+                                            Like everything we do as a production company, we tailor each project with the right creative team and the same care we bring to our films. Every frame is purpose-driven—and perfectly styled.
+                                        </p>
                                         </div>
                                     </div>
                                 </div>
@@ -122,9 +134,9 @@ export default function About() {
                  <div className='container-xl'>
                     <div className='row mb-5'>
                         <div className='col-12'>
-                            <h3 className='text-uppercase display-6 fw-bold'>
+                            <h2 className=' display-6 fw-bold'>
                                 Founders
-                            </h3>
+                            </h2>
                         </div>
                     </div>
                     <div className='row mb-5'>
@@ -132,7 +144,7 @@ export default function About() {
                             <Image
                                 className='img-fluid'
                                 src="/images/ambi.webp" 
-                                alt='description'
+                                alt='Production company in Jakarta'
                                 width={800}
                                 height={600}
                             />
@@ -140,16 +152,16 @@ export default function About() {
                         <div className='col-lg-8'>
                             <figure>
                                 <blockquote className="blockquote">
-                                    <h4 className='fw-bold h2'>AMBI FAURI</h4>
+                                    <h3 className='fw-bold h2'>AMBI FAURI</h3>
                                 </blockquote>
                                 <figcaption className="blockquote-footer">
-                                    <span className='h5 text-light'>Executive Producer</span>
+                                <h3><span className='h5 text-light'>Executive Producer</span></h3>
                                 </figcaption>
                             </figure>
                             <p>
-                            With a rich background in advertising and production, Ambi Fauri started his career in Account Management before moving into production. His experience at Shooting Gallery Asia, with its offices across Southeast Asia and China, connected him to a global network. </p>
-                            <p>In 2012, he founded Fat Belly Pictures, and later, Plana in 2022, where he continues to lead with a blend of global insight and local expertise.</p>
-                            <p>His love for the art film-making, is greater than the love of great food and whisky.</p>
+                            With a background in advertising and film production, Ambi started in Account Management before joining Shooting Gallery Asia. His career led him across Southeast Asia and China, building a global production network</p>
+                            <p>In 2012, he founded Fat Belly Pictures. In 2022, Plana was born, built on his belief that a production company should feel like home: fast, reliable, and always in sync with creative ambition.</p>
+                            <p>His love for filmmaking is only rivaled by his love for great food and fine whisky.</p>
                         </div>
                     </div>
                     <div className='row'>
@@ -157,7 +169,7 @@ export default function About() {
                             <Image
                                 className='img-fluid'
                                 src="/images/ambi2.webp" 
-                                alt='description'
+                                alt='Production company in Jakarta'
                                 width={800}
                                 height={600}
                             />
@@ -165,16 +177,16 @@ export default function About() {
                         <div className='col-lg-8'>
                             <figure>
                                 <blockquote className="blockquote">
-                                    <h4 className='fw-bold h2'>EDWIN SYAMSUDDIN</h4>
+                                    <h3 className='fw-bold h2'>EDWIN SYAMSUDDIN</h3>
                                 </blockquote>
                                 <figcaption className="blockquote-footer">
-                                    <span className='h5 text-light'>Finance Director</span>
+                                    <h3><span className='h5 text-light'>Finance Director</span></h3>
                                 </figcaption>
                             </figure>
                             <p>
-                            With over a decade of experience in finance, Edwin began his career at Bank Mandiri, where he rose to Section Head in the Commercial Risk Group. In 2013, he transitioned to the creative industry, joining PT Fatbelly Pictures as Finance Director. </p>
-                            <p>At Plana, Edwin ensures financial stability, supporting the seamless execution of every production and bringing creative visions to life.</p>
-                            <p>His passion for crunching numbers is only surpassed by his love for kecap manis.</p>
+                            After a decade in finance, including a role as Section Head at Bank Mandiri, Edwin took a wild turn into the creative industry. In 2013, he joined PT Fatbelly Pictures, then co-founded Plana in 2022. </p>
+                            <p>At Plana, he makes sure the numbers make sense, so creativity doesn’t have to worry. He keeps the production company financially grounded, so every wild idea gets its wings.</p>
+                            <p>His obsession with spreadsheets is second only to his obsession with kecap manis</p>
                         </div>
                     </div>
                  </div>

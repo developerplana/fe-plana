@@ -66,8 +66,7 @@ export default function Contact() {
             <div className="row">
               <div className="col-12">
                 <h1 className='text-uppercase display-6 fw-bold'>
-                  SAY HI, DON’T BE SHY.<br />
-                  DROP US A LINE AND MAKE SOMETHING HAPPEN.
+                Contact Plana — Let’s Make Something Happen<br />
                 </h1>
               </div>
             </div>
