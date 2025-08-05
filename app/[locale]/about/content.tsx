@@ -78,15 +78,23 @@ export default function About() {
                                     <div className="col-lg-9">
                                         <div className="card-body py-4">
                                             <h3 className="card-title h2 fw-bold">VIDEO PRODUCTION SERVICES</h3>
-                                            <p className="card-text">
-                                                We offer full-scale production services that take your vision from concept to final cut. Every project begins with building the right crew, from director to lighting tech.
-                                                As a creative production company, we handle pre-production, on-set execution, and post-production supervision with care and precision. The result? Content that feels seamless, looks sharp, and hits the mark.
-                                            </p>
+                                            <ul className="card-text">
+                                                <li>Creative development & script support.</li>
+                                                <li>Line production & local fixers.</li>
+                                                <li>Full-scale commercial shoots</li>
+                                                <li>Corporate video production</li>
+                                                <li>Location scouting & permits</li>
+                                                <li>Casting, art direction & styling</li>
+                                                <li>Cinematography & directing</li>
+                                                <li>Post-production: editing, sound, grading, animation</li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+
                         {/* <div className='col-12'>
                             <div className='card mb-4 bg-transparent service rounded-4'>
                                 <div className="row g-0">
@@ -117,8 +125,11 @@ export default function About() {
                                         <div className="card-body py-4">
                                             <h3 className="card-title h2 fw-bold">PHOTOGRAPHY</h3>
                                             <p className="card-text">
-                                                Our photography isn&apos;t just about taking pretty pictures—it&apos;s about capturing intent. From bold ad campaigns to elegant product shots, we create visual assets that speak directly to your brand identity.
-                                                Like everything we do as a production company, we tailor each project with the right creative team and the same care we bring to our films. Every frame is purpose-driven—and perfectly styled.
+                                                <li>Campaign photography (fashion, lifestyle, automotive, product)</li>
+                                                <li>Branded key visuals & hero shots</li>
+                                                <li>On-location shoots across Indonesia</li>
+                                                <li>Editorial-style content & stills during film shoots</li>
+                                                <li>Full crew & equipment handling</li>
                                             </p>
                                         </div>
                                     </div>
