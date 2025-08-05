@@ -87,7 +87,7 @@ export default function About() {
                                 </div>
                             </div>
                         </div>
-                        <div className='col-12'>
+                        {/* <div className='col-12'>
                             <div className='card mb-4 bg-transparent service rounded-4'>
                                 <div className="row g-0">
                                     <div className="col-md-3">
@@ -105,7 +105,7 @@ export default function About() {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                         <div className='col-12'>
                             <div className='card mb-4 bg-transparent service rounded-4'>
                                 <div className="row g-0">
