@@ -33,7 +33,7 @@ export default function Blog() {
                 <div className="container-xl">
                     <div className="row">
                         <div className="col-12">
-                            <h1 className=' display-6 fw-bold'>Insights, inspirations, industry trends—<br></br>and everything in between.</h1>
+                            <h1 className=' display-6 fw-bold'>Insights, Inspiration, and Industry <br></br>Notes from a Creative Production House</h1>
                         </div>
                     </div>
                 </div>

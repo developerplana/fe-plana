@@ -8,7 +8,7 @@ export default function About() {
                 <div className="container-xl">
                     <div className="row">
                         <div className="col-12">
-                            <h2 className='text-uppercase display-6 fw-bold'>WE BELIEVE IN THE CRAFT OF EXCEPTIONAL FILMMAKING.</h2>
+                        <div className="text-uppercase display-6 fw-bold">WE BELIEVE IN THE CRAFT OF EXCEPTIONAL FILMMAKING.</div>
                         </div>
                     </div>
                 </div>
@@ -77,7 +77,7 @@ export default function About() {
                                     </div>
                                     <div className="col-lg-9">
                                         <div className="card-body py-4">
-                                            <h3 className="card-title h2 fw-bold">VIDEO PRODUCTION SERVICES</h3>
+                                            <h3 className="card-title h2 fw-bold">Film & Video Production</h3>
                                             <ul className="card-text">
                                                 <li>Creative development & script support.</li>
                                                 <li>Line production & local fixers.</li>
@@ -123,7 +123,7 @@ export default function About() {
                                     </div>
                                     <div className="col-md-9">
                                         <div className="card-body py-4">
-                                            <h3 className="card-title h2 fw-bold">PHOTOGRAPHY</h3>
+                                            <h3 className="card-title h2 fw-bold">Photography Production</h3>
                                             <p className="card-text">
                                                 <li>Campaign photography (fashion, lifestyle, automotive, product)</li>
                                                 <li>Branded key visuals & hero shots</li>
