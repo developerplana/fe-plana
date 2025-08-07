@@ -42,10 +42,14 @@ export default function HomePage() {
                 <div className="col-12 col-lg-7 col-xl-6">
                   <h1 className="display-4 fw-bold">Creative Production House in Jakarta. Go<br />
                       Forward with Plana.</h1>
-                  <p className="d-block d-lg-none">Saddle up! Plana is a creative production house in Jakarta delivering fast, high-impact visuals for local and international brands. From commercial films to branded storytelling, we turn bold ideas into standout content, crafted with speed, precision, and style. No project is too wild, ride toward success with Plana</p>
+                  <p className="d-block d-lg-none">PLANA is a Jakarta-based production house delivering bold, high-impact visuals for local and international brands.
+From commercial films to branded storytelling and photography, we turn ambitious ideas into standout content—crafted with speed, style, and cinematic intent.
+No concept is too ambitious. Let’s make it happen.</p>
                 </div>
                 <div className="col-12 col-lg-5 col-xl-6 pt-lg-5 pt-0">
-                  <p className="pt-lg-5 d-none d-lg-block">Saddle up! Plana is the mustang of advertising film production, delivering fast, creative solutions for local and international clients. No project is too wild—ride toward success with Plana!</p>
+                  <p className="pt-lg-5 d-none d-lg-block">PLANA is a Jakarta-based production house delivering bold, high-impact visuals for local and international brands.
+From commercial films to branded storytelling and photography, we turn ambitious ideas into standout content—crafted with speed, style, and cinematic intent.
+No concept is too ambitious. Let’s make it happen.</p>
                 </div>
                 <div className="col-12">
                   <Link href="#anti-hero">
@@ -74,7 +78,9 @@ export default function HomePage() {
                   <div className="col-12 col-lg-4 d-none d-lg-block">
                       <div className="sticky">
                         <h2 className="display-6 fw-bold">FEATURED WORKS</h2>
-                        <p>At Plana, we live to produce branded content, commercial films, photography, and feature-length projects. Every piece is a fusion of creative direction and purposeful storytelling. As a production house in Jakarta, we’re driven to create visuals that captivate, move, and inspire—from the first spark to the final frame.</p>
+                        <p>At Plana, we live to create—branded content, commercial films, and campaign photography </p>
+                        <p>Every piece we produce blends cinematic direction with purposeful storytelling. As a Jakarta-based 
+                            production house with a global mindset, we craft visuals that captivate, move, and inspire—from the first spark to the final frame.</p>
                           <Link href="/works" className="btn btn-plana fw-bold rounded-pill px-4 justify-content-end">
                             SEE ALL WORKS
                           </Link>
@@ -82,7 +88,9 @@ export default function HomePage() {
                   </div>
                   <div className="col-12 col-lg-4 d-block d-lg-none mb-4">
                     <h2 className="display-6 fw-bold">FEATURED WORKS</h2>
-                    <p>At Plana, we live to produce branded content, commercial films, photography, and feature-length projects. Every piece is a fusion of creative direction and purposeful storytelling. As a production house in Jakarta, we’re driven to create visuals that captivate, move, and inspire—from the first spark to the final frame.</p>
+                    <p>At Plana, we live to create—branded content, commercial films, and campaign photography</p>
+                    <p>Every piece we produce blends cinematic direction with purposeful storytelling. As a Jakarta-based 
+                        production house with a global mindset, we craft visuals that captivate, move, and inspire—from the first spark to the final frame.</p>
                       <Link href="/works" className="btn btn-plana fw-bold rounded-pill px-4 justify-content-end">
                         SEE ALL WORKS
                       </Link>
@@ -141,7 +149,10 @@ export default function HomePage() {
               <div className="container-xl">
                 <div className="row">
                   <div className="col-12">
-                    <h2 className="display-5 fw-bold py-5">We believe in the craft of exceptional filmmaking. As a Jakarta-based production house, we merge aesthetics and strategy to build compelling narratives—designed to connect, engage, and leave a lasting impact.</h2>
+                    <h2 className="display-5 fw-bold py-5">We believe in the power of crafted visuals—where every frame serves a purpose, and every story leaves a mark.
+                      <br/><br/>
+                      From Jakarta, we collaborate with both local and international creatives to produce content that resonates far beyond the frame—cinematic, strategic, and built to last.
+                    </h2>
                     <Link href="/about" className="btn btn-plana fw-bold rounded-pill px-4 float-end">
                         MORE ABOUT PLANA
                     </Link>
