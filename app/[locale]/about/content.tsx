@@ -25,8 +25,10 @@ export default function About() {
                             <div className='row mb-4'>
                                 <div className='col-12 col-lg-6'>
                                     <p>
-                                        PLANA was founded in 2021 as a creative production company based in Jakarta, Indonesia. We make films for money. LOL, NO, we make films to make you comfortable. Like our name.
-                                        PLANA is more than just a name, it&apos;s a belief. A belief that creativity should feel effortless, that the production process should make you feel at ease, whether you&apos;re a bold startup or a big brand needing fresh content
+                                    We’re a Jakarta-based production house that creates cinematic advertising films, branded content, and campaign photography—built for global collaboration and crafted with Southeast Asian soul.<br></br>
+                                    </p>
+                                    <p>
+                                    Our core team brings decades of production experience across Indonesia and the region. We know how to turn complex challenges into smooth, story-first solutions. We’ve partnered with both local and international filmmakers, agencies, and brands—from nimble creative shops to global networks.<br></br>
                                     </p>
                                 </div>
                                 <div className='col-12 col-lg-6'>
@@ -51,8 +53,10 @@ export default function About() {
                                 </div>
                                 <div className='col-12 col-lg-6'>
                                     <p>
-                                        At Plana, we bridge the gap between global creativity and local know-how. Our mission is to elevate Indonesia’s creative industry by combining world-class expertise with the best local talents.
-                                        As a Jakarta-based production company, we assemble the right team for every project—turning bold ideas into compelling visual experiences. Whether working with homegrown brands or international giants, we bring creativity, clarity, and comfort to every frame.
+                                        Our goal is simple: to deliver content that’s visually striking, emotionally grounded, and build to perform. Whether it’s a TVC in Jakarta, a branded short in Sumatra, or a stills shoot on a remote beach in Sumba—we make things happen, quickly, creatively, and without the usual production drama (unless you count sleep deprivation and caffeine high)<br></br>
+                                    </p>
+                                    <p>
+                                        We believe every great story deserves the right crew. That’s why we build each team with care—pulling from Indonesia’s creative core and global collaborators alike—to bring your bold ideas to life
                                     </p>
                                 </div>
                             </div>
@@ -78,6 +82,7 @@ export default function About() {
                                     <div className="col-lg-9">
                                         <div className="card-body py-4">
                                             <h3 className="card-title h2 fw-bold">Film & Video Production</h3>
+
                                             <ul className="card-text">
                                                 <li>Creative development & script support.</li>
                                                 <li>Line production & local fixers.</li>
@@ -88,6 +93,7 @@ export default function About() {
                                                 <li>Cinematography & directing</li>
                                                 <li>Post-production: editing, sound, grading, animation</li>
                                             </ul>
+
                                         </div>
                                     </div>
                                 </div>
@@ -124,13 +130,13 @@ export default function About() {
                                     <div className="col-md-9">
                                         <div className="card-body py-4">
                                             <h3 className="card-title h2 fw-bold">Photography Production</h3>
-                                            <p className="card-text">
+                                            <ul className="card-text">
                                                 <li>Campaign photography (fashion, lifestyle, automotive, product)</li>
                                                 <li>Branded key visuals & hero shots</li>
                                                 <li>On-location shoots across Indonesia</li>
                                                 <li>Editorial-style content & stills during film shoots</li>
                                                 <li>Full crew & equipment handling</li>
-                                            </p>
+                                                </ul>
                                         </div>
                                     </div>
                                 </div>
