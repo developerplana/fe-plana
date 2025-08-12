@@ -31,7 +31,24 @@ export default function HomePage() {
   }, [works]);
 
   // if (loadingWorks) return <p>Loading...</p>;
-  if (isLoading) return <p>Loading works...</p>;
+  if (isLoading) {
+    return (
+      <main className="d-flex justify-content-center align-items-center" style={{ height: '100vh' }}>
+        <div
+          className="spinner-border"
+          role="status"
+          style={{
+            width: '4rem',
+            height: '4rem',
+            color: '#e30613' // PLANA red
+          }}
+        >
+          <span className="visually-hidden">Loading...</span>
+        </div>
+      </main>
+    );
+  }
+    
   if (error) return <p>Error loading works.</p>;
 
     return (
