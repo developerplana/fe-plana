@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import type { ReactNode } from "react";
 // import { Geist, Geist_Mono } from "next/font/google";
 
 import {
   NextIntlClientProvider,
   useMessages,
 } from "next-intl";
-import { useLocale } from "next-intl";
+
 
 import Navbar from '../[locale]/components/Navbar';
 import Footer from '../[locale]/components/Footer';
@@ -63,23 +62,18 @@ export async function generateMetadata(): Promise<Metadata> {
     icons: {
       icon: '/images/favicon.ico',
     },
-    alternates: {
-      canonical: `https://plana.vision`, // adjust with full path if needed
-    }
   }
 }
 
-interface RootLayoutProps {
-  children: ReactNode;
+export default function RootLayout({
+  children,
+  params,
+}: {
+  children: React.ReactNode;
   params: { locale: string };
-}
-
-export default  function RootLayout({ children }: RootLayoutProps) {
-  const locale = useLocale();
-
+}) {
+  const locale = params.locale; // ✅ Correct way to get locale
   const messages = useMessages();
-  // const t = useTranslations();
-
 
   return (
     <html lang={locale} className={`${exo.variable} ${montserrat.variable} antialiased`}>
