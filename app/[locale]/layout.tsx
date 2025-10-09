@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 // import { Geist, Geist_Mono } from "next/font/google";
-import { ReactNode } from "react";
+
 import {
   NextIntlClientProvider,
   useMessages,
 } from "next-intl";
-
+import { useLocale } from "next-intl";
 
 import Navbar from '../[locale]/components/Navbar';
 import Footer from '../[locale]/components/Footer';
@@ -33,19 +34,23 @@ const montserrat = Montserrat({
 
 
 
-async function getPageData(locale: string) {
+async function getPageData() {
   
-  const baseUrl = process.env.NEXT_PUBLIC_API_URL ?? "http://127.0.0.1:8000";
-  const res = await fetch(`${baseUrl}/api/metatag/${locale}/home`, {
+  const pathSegment = 'home'
+  
+  const baseUrl = process.env.NEXT_PUBLIC_API_URL ?? 'http://127.0.0.1:8000';
+
+  const res = await fetch(`${baseUrl}/api/metatag/${pathSegment}`, {
     next: { revalidate: 60 },
   });
+
+  console.log("ini res",res)
   return res.json();
 }
  
-export async function generateMetadata(
-  { params }: { params: { locale: string } }   // ✅ FIXED
-): Promise<Metadata> {
-  const data = await getPageData(params.locale);
+export async function generateMetadata(): Promise<Metadata> {
+
+  const data = await getPageData();
   const keywordsArray = typeof data.meta_keywords === 'string'
   ? data.meta_keywords.split(',').map((kw: string) => kw.trim())
   : data.meta_keywords || [];
@@ -60,14 +65,18 @@ export async function generateMetadata(
     },
   }
 }
-type RootLayoutProps = {
+
+interface RootLayoutProps {
   children: ReactNode;
   params: { locale: string };
-};
+}
 
-export default function RootLayout({ children, params }: RootLayoutProps) {
-  const locale = params.locale;
+export default  function RootLayout({ children }: RootLayoutProps) {
+  const locale = useLocale();
+
   const messages = useMessages();
+  // const t = useTranslations();
+
 
   return (
     <html lang={locale} className={`${exo.variable} ${montserrat.variable} antialiased`}>
