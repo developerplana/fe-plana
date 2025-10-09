@@ -33,23 +33,19 @@ const montserrat = Montserrat({
 
 
 
-async function getPageData() {
+async function getPageData(locale: string) {
   
-  const pathSegment = 'home'
-  
-  const baseUrl = process.env.NEXT_PUBLIC_API_URL ?? 'http://127.0.0.1:8000';
-
-  const res = await fetch(`${baseUrl}/api/metatag/${pathSegment}`, {
+  const baseUrl = process.env.NEXT_PUBLIC_API_URL ?? "http://127.0.0.1:8000";
+  const res = await fetch(`${baseUrl}/api/metatag/${locale}/home`, {
     next: { revalidate: 60 },
   });
-
-  console.log("ini res",res)
   return res.json();
 }
  
-export async function generateMetadata(): Promise<Metadata> {
-
-  const data = await getPageData();
+export async function generateMetadata(
+  { params }: { params: { locale: string } }   // ✅ FIXED
+): Promise<Metadata> {
+  const data = await getPageData(params.locale);
   const keywordsArray = typeof data.meta_keywords === 'string'
   ? data.meta_keywords.split(',').map((kw: string) => kw.trim())
   : data.meta_keywords || [];
