@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 // import { Geist, Geist_Mono } from "next/font/google";
-
+import { ReactNode } from "react";
 import {
   NextIntlClientProvider,
   useMessages,
@@ -60,15 +60,13 @@ export async function generateMetadata(
     },
   }
 }
-
-export default function RootLayout({
-  children,
-  params,
-}: {
-  children: React.ReactNode;
+type RootLayoutProps = {
+  children: ReactNode;
   params: { locale: string };
-}) {
-  const locale = params.locale; // ✅ Correct way to get locale
+};
+
+export default function RootLayout({ children, params }: RootLayoutProps) {
+  const locale = params.locale;
   const messages = useMessages();
 
   return (
