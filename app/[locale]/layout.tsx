@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import type { ReactNode } from "react";
-// import { Geist, Geist_Mono } from "next/font/google";
+
 
 import {
   NextIntlClientProvider,
   useMessages,
 } from "next-intl";
-import { useLocale } from "next-intl";
+
 
 import Navbar from '../[locale]/components/Navbar';
 import Footer from '../[locale]/components/Footer';
