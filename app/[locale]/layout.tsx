@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
 
-
-import {
-  NextIntlClientProvider,
-  useMessages,
-} from "next-intl";
+import { getMessages } from "next-intl/server";
+import { NextIntlClientProvider} from "next-intl";
 
 
 import Navbar from '../[locale]/components/Navbar';
@@ -73,7 +70,7 @@ interface RootLayoutProps {
 export default async function RootLayout(props: RootLayoutProps) {
   const { locale } = await props.params;
 
-  const messages = useMessages();
+  const messages = await getMessages();
   // const t = useTranslations();
 
 
