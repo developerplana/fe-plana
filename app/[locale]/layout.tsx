@@ -67,12 +67,12 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 interface RootLayoutProps {
-  children: ReactNode;
-  params: { locale: string };
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>; // WAJIB Promise untuk Next.js 15
 }
 
-export default  function RootLayout({ children }: RootLayoutProps) {
-  const locale = useLocale();
+export default async function RootLayout(props: RootLayoutProps) {
+  const { locale } = await props.params;
 
   const messages = useMessages();
   // const t = useTranslations();
@@ -222,7 +222,7 @@ export default  function RootLayout({ children }: RootLayoutProps) {
         <Canonical />
           <Navbar />
           <Social />
-          {children}
+          {props.children}
           <Footer />
         </NextIntlClientProvider>
       </body>
