@@ -4,11 +4,14 @@ const locales = ['en', 'id'];
 
 export default createMiddleware({
   locales,
-  defaultLocale: 'en',              // ✅ Add this!
+  defaultLocale: 'en',
   localeDetection: true,
-  localePrefix: 'as-needed'         // ✅ This hides /en
+  localePrefix: 'as-needed'
 });
 
 export const config = {
-  matcher: ['/((?!api|_next|public-file|search-api|.*\\..*).*)'],
+  matcher: [
+    // Match all paths EXCEPT:
+    '/((?!api|_next|.*\\..*|google5eb672075790b60\\.html).*)',
+  ],
 };
