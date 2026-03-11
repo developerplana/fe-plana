@@ -29,7 +29,16 @@ export default function BlogDetail() {
         image:string;
         altImageDesc:string;
         author:string;
+        updated_at:string;
       };
+
+    function formatDate(dateString: string) {
+        return new Date(dateString).toLocaleDateString("en-GB", {
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+        });
+    }
       //get API works
       const params = useParams();
       const slug = params?.slug;
@@ -65,7 +74,8 @@ export default function BlogDetail() {
                                 className="card-img-top mb-1 rounded-2" 
                                 alt={dataBlogsSlug?.altImageDesc || ''} />
                             )}
-                            <p className='fs-5 fw-normal mb-2 mt-3'>By {dataBlogsSlug?.author} | Published in 22 May 2025</p>
+                            <p className='fs-5 fw-normal mb-2 mt-3'>By {dataBlogsSlug?.author} | Published in{" "}
+                                {dataBlogsSlug?.updated_at ? formatDate(dataBlogsSlug.updated_at) : "-"}</p>
                             {/* <hr className='border-white py-3' /> */}
                                 <div className="rich-content" dangerouslySetInnerHTML={{ __html: dataBlogsSlug?.descID || '' }} />
                             {/* <hr className='border-white mt-5 mb-5' /> */}
