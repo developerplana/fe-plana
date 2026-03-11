@@ -7,6 +7,16 @@ import useBlogsAll   from  '../usecase/useBlogsAll';
 import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 
+export function formatDate(dateString: string) {
+    const date = new Date(dateString);
+  
+    return date.toLocaleDateString("en-US", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    });
+  }
+
 export default function BlogDetail() {
     type BlogItem = {
         [x: string]: string;
@@ -74,8 +84,10 @@ export default function BlogDetail() {
                                 className="card-img-top mb-1 rounded-2" 
                                 alt={dataBlogsSlug?.altImageDesc || ''} />
                             )}
-                            <p className='fs-5 fw-normal mb-2 mt-3'>By {dataBlogsSlug?.author} | Published in{" "}
-                                {dataBlogsSlug?.updated_at ? formatDate(dataBlogsSlug.updated_at) : "-"}</p>
+                            <p className='fs-5 fw-normal mb-2 mt-3'>By {dataBlogsSlug?.author} |  Published in{" "}
+                                    {dataBlogsSlug?.updated_at
+                                        ? formatDate(dataBlogsSlug.updated_at)
+                                        : "-"}</p>
                             {/* <hr className='border-white py-3' /> */}
                                 <div className="rich-content" dangerouslySetInnerHTML={{ __html: dataBlogsSlug?.descID || '' }} />
                             {/* <hr className='border-white mt-5 mb-5' /> */}
