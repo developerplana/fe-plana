@@ -7,7 +7,6 @@ import { NextIntlClientProvider} from "next-intl";
 import Navbar from '../[locale]/components/Navbar';
 import Footer from '../[locale]/components/Footer';
 import Social from '../[locale]/components/Social';
-import Canonical from '../[locale]/components/Canonical';
 import '../[locale]/generalplana.css'; // Import global styles
 import '../[locale]/homepage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -52,10 +51,14 @@ export async function generateMetadata(): Promise<Metadata> {
   : data.meta_keywords || [];
 
   return {
+    metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://plana.vision'),
     title: data.meta_title,
     description: data.meta_description,
     keywords: keywordsArray,
     robots: 'index, follow',
+    alternates: {
+      canonical: '/',
+    },
     icons: {
       icon: '/images/favicon.ico',
     },
@@ -215,7 +218,6 @@ export default async function RootLayout(props: RootLayoutProps) {
         </Script>
 
         <NextIntlClientProvider locale={locale} messages={messages}>
-        <Canonical />
           <Navbar />
           <Social />
           {props.children}

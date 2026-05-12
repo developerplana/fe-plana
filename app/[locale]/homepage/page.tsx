@@ -1,16 +1,16 @@
 import { NextIntlClientProvider, useLocale, useMessages } from "next-intl";
 import Content from "./content";
-import Head from 'next/head';
-
+import Script from "next/script";
 
 export default function Page() {
   const locale = useLocale();
   const messages = useMessages()
 
   return (
-    <><Head>
+    <>
       {/* JSON-LD: WebSite */}
-      <script
+      <Script
+        id="schema-website"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
@@ -37,7 +37,8 @@ export default function Page() {
         }} />
 
       {/* JSON-LD: Organization */}
-      <script
+      <Script
+        id="schema-organization"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
@@ -64,9 +65,10 @@ export default function Page() {
             },
           }),
         }} />
-    </Head><NextIntlClientProvider locale={locale} messages={messages}>
+      
+      <NextIntlClientProvider locale={locale} messages={messages}>
         <Content></Content>
-      </NextIntlClientProvider></>
-
+      </NextIntlClientProvider>
+    </>
   );
 }
