@@ -56,9 +56,6 @@ export async function generateMetadata(): Promise<Metadata> {
     description: data.meta_description,
     keywords: keywordsArray,
     robots: 'index, follow',
-    alternates: {
-      canonical: '/',
-    },
     icons: {
       icon: '/images/favicon.ico',
     },
